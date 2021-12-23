@@ -9,21 +9,20 @@
 #define CASE_H_
 
 #include <iostream>
-#include "pion.h"
 using namespace std;
 
 class Case {
 	protected :
 		string nom;
-		Case suivante ;
+		Case* suivante;
 	public:
 		Case();
 		virtual ~Case();
 		void arreterSur() ;
 		string getNom(){return this->nom;};
-		void setNom(string nom){this->nom = nom ; };
-		Case getSuivante(){return this->suivante;};
-		void setSuivante(Case suivante){this->suivante = suivante;};
+		void setNom(string nom){this->nom = nom ;};
+		Case* getSuivante(){return this->suivante;};
+		void setSuivante(Case* suivante){this->suivante = suivante;};
 };
 
 #endif /* CASE_H_ */

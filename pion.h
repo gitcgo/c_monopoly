@@ -9,9 +9,11 @@
 #define PION_H_
 
 #include <iostream>
-#include "joueur.h"
 #include "Case.h"
+#include "joueur.h"
+
 using namespace std;
+
 
 class pion {
 	private :

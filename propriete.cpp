@@ -7,9 +7,10 @@
 
 #include "propriete.h"
 
-propriete::propriete() {
-	// TODO Auto-generated constructor stub
-
+propriete::propriete(string nom,int loyer , int prixAchat) {
+	this->loyer =loyer ;
+	this->nom =nom;
+	this->prixAchat = prixAchat;
 }
 
 propriete::~propriete() {
