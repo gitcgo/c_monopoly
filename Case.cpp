@@ -7,9 +7,9 @@
 
 #include "Case.h"
 
-Case::Case() {
-	// TODO Auto-generated constructor stub
-
+Case::Case(string nom, Case* suivante) {
+	this->nom  = nom ;
+	this->suivante = suivante;
 }
 
 Case::~Case() {

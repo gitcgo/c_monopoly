@@ -7,8 +7,10 @@
 
 #include "joueur.h"
 
-joueur::joueur() {
-	solde = 1500;
+joueur::joueur(string nom,pion Pion ) {
+	this->solde = 1500;
+	this->Pion = Pion;
+	this->Nom = nom;
 }
 
 joueur::~joueur() {

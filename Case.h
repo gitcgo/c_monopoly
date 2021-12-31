@@ -16,7 +16,7 @@ class Case {
 		string nom;
 		Case* suivante;
 	public:
-		Case();
+		Case(string nom, Case* suivante);
 		virtual ~Case();
 		void arreterSur() ;
 		string getNom(){return this->nom;};

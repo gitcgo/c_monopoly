@@ -8,8 +8,7 @@
 #include "jeu.h"
 
 jeu::jeu() {
-	// TODO Auto-generated constructor stub
-
+	this->tourdejeu = 0 ;
 }
 
 jeu::~jeu() {
