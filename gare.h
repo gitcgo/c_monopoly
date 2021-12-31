@@ -14,7 +14,7 @@ class gare: public propriete {
 private  :
 	string nom ;
 public:
-	gare();
+	gare(string nom,int loyer , int prixAchat,Case* suivante);
 	virtual ~gare();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};

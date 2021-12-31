@@ -7,8 +7,7 @@
 
 #include "chance.h"
 
-chance::chance() {
-	// TODO Auto-generated constructor stub
+chance::chance(string nom, Case* suivante):Case(nom,suivante) {
 
 }
 

@@ -14,7 +14,7 @@ class chance: public Case {
 private :
 	string nom ;
 public:
-	chance();
+	chance(string nom, Case* suivante);
 	virtual ~chance();
 	void arreterSur() ;
 };

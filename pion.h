@@ -30,11 +30,10 @@ class pion {
 		void setPosition(Case truc) {this->Position = truc;}; //Définis la case sur laquelle se situe le pion
 		Case getPosition() {return this->Position;}; //Return la position où se trouve le pion
 	
-		void setNom(string nom){this->nom = nom}; //Définis le nom du pion
+		void setNom(string nom){this->nom = nom;}; //Définis le nom du pion
 		string getNom(){return this->nom;}; //Return le nom du Pion
 	
 		void deplacer(); //Déplace le pion sur le plateau
-		void setPosition(Case truc) {this->Position = truc;}; //Définis la case sur laquelle se situe le pion
 };
 
 #endif /* PION_H_ */

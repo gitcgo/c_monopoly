@@ -16,7 +16,7 @@ class communaute: public Case {
 	private :
 		string nom ;
 	public:
-		communaute();
+		communaute(string nom, Case* suivante);
 		virtual ~communaute();
 		void arreterSur() ;
 };

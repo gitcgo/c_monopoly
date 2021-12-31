@@ -7,7 +7,7 @@
 
 #include "gare.h"
 
-gare::gare() {
+gare::gare(string nom,int loyer , int prixAchat,Case* suivante):propriete(nom,loyer,prixAchat,suivante) {
 	// TODO Auto-generated constructor stub
 
 }
