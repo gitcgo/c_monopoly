@@ -1,13 +1,6 @@
-/*
- * gare.h
- *
- *  Created on: 23 déc. 2021
- *      Author: aveyronvictor
- */
-
 #ifndef GARE_H_
 #define GARE_H_
-
+#include <string>
 #include "propriete.h"
 
 class gare: public propriete {
@@ -18,7 +11,7 @@ public:
 	virtual ~gare();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};
-	void arreterSur();
+	void arreterSur(joueur* ptjoueur);
 };
 
 #endif /* GARE_H_ */
