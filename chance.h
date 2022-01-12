@@ -13,8 +13,9 @@
 class chance: public Case {
 private :
 	string nom ;
+	Carte_chance pile_carte_chance ;
 public:
-	chance();
+	chance(string nom, Case* suivante);
 	virtual ~chance();
 	void arreterSur() ;
 };

@@ -7,9 +7,8 @@
 
 #include "propriete.h"
 
-propriete::propriete(string nom,int loyer , int prixAchat) {
+propriete::propriete(string nom,int loyer , int prixAchat,Case* suivante):Case(nom,suivante) {
 	this->loyer =loyer ;
-	this->nom =nom;
 	this->prixAchat = prixAchat;
 }
 

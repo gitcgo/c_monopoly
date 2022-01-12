@@ -16,7 +16,7 @@ protected :
 	int loyer ;
 	int prixAchat ;
 public:
-	propriete(string nom,int loyer , int prixAchat);
+	propriete(string nom,int loyer , int prixAchat,Case* suivante);
 	virtual ~propriete();
 	void arreterSur() ;
 	string getNom(){return this->nom;};

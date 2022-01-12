@@ -7,7 +7,7 @@
 
 #include "depart.h"
 
-depart::depart() {
+depart::depart(string nom,Case* suivante):Case(nom,suivante) {
 	// TODO Auto-generated constructor stub
 
 }
@@ -16,3 +16,6 @@ depart::~depart() {
 	// TODO Auto-generated destructor stub
 }
 
+void depart::arreterSur(joueur* ptjoueur) {
+	*ptjoueur->crediter(200);
+}

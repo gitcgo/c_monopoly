@@ -6,13 +6,18 @@
  */
 
 #include "de.h"
+#include <stdlib.h>
 
 de::de() {
-	// TODO Auto-generated constructor stub
-
+	this->nbFaces = 6 ;
+	this->valeur = 0 ;
 }
 
 de::~de() {
 	// TODO Auto-generated destructor stub
 }
 
+void de::lancer() {
+	this->valeur = rand() % (this->nbFaces - 1) + 1; // On lance un dé et on actualise la valeur du dé
+
+}
