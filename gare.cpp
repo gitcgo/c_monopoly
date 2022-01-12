@@ -24,7 +24,7 @@ void gare::arreterSur(){
 			cout<<"Vous avez acheté la propriété "<< this->nom << ". Votre solde est maintenant de " << joueur.getSolde;
 		} //Il faut ajouter la propriété à la liste des propriétés du joueur.
 		else{
-			cout<< "Vous avez décidé de ne pas acheter cette propriété."
+			cout<< "Vous avez décidé de ne pas acheter cette propriété"<<endl;
 		}
 	}
 	else{
