@@ -17,6 +17,7 @@ public:
 	virtual ~de();
 	int getNbfaces(){return this->nbFaces;};
 	int getValeur(){return this->valeur;};
+	void lancer(); // lance un dé et actualise la valuer du dé
 };
 
 #endif /* DE_H_ */
