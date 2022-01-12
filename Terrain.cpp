@@ -14,8 +14,8 @@ Terrain::Terrain(string nom,int loyer , int prixAchat, string couleur, Case* sui
 	this->loyer = loyer;
 }
 
-void arreterSur(){
-	cout << "Vous êtes arrivé sur la case " << nom << "Souhaitez-vous acheter cette propriété pour "<< loyer << "E ?" << endl;
+void Terrain::arreterSur(){
+	cout << "Vous êtes tombé sur la case " << this->nom << ", la somme de "<< this->loyer << " € va être débiter sur votre compte."<< endl;
 }
 
 Terrain::~Terrain() {
