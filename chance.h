@@ -9,11 +9,12 @@
 #define CHANCE_H_
 
 #include "Case.h"
+#include "Carte.h"
 
 class chance: public Case {
 private :
 	string nom ;
-	Carte_chance pile_carte_chance ;
+	Carte pile_carte_chance ;
 public:
 	chance(string nom, Case* suivante);
 	virtual ~chance();
