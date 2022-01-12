@@ -10,6 +10,7 @@
 
 #include "Case.h"
 #include <iostream>
+#include "joueur.h"
 using namespace std;
 
 class communaute: public Case {
@@ -18,7 +19,7 @@ class communaute: public Case {
 	public:
 		communaute(string nom, Case* suivante);
 		virtual ~communaute();
-		void arreterSur() ;
+		void arreterSur(joueur* joueur) ;
 };
 
 #endif /* COMMUNAUTE_H_ */

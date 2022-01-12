@@ -15,6 +15,7 @@ Case::Case(string nom, Case* suivante) {
 
 Case::Case(string nom) {
     this->nom  = nom ;
+    this->suivante= NULL;
 }
 
 Case::~Case() {

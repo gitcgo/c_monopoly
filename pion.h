@@ -8,10 +8,10 @@
 #ifndef PION_H_
 #define PION_H_
 
-#include <iostream>
-#include "Case.h"
-#include "joueur.h"
 
+#include <iostream>
+#include "joueur.h"
+#include "Case.h"
 using namespace std;
 
 

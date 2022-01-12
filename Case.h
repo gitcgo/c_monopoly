@@ -16,7 +16,7 @@ using namespace std;
 class Case {
 	protected :
         string nom;
-        Case* suivante{};
+        Case* suivante;
 	public:
 		Case(string nom, Case* suivante);
         Case(string nom);
