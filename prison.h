@@ -9,14 +9,15 @@
 #define PRISON_H_
 
 #include "Case.h"
+#include "joueur.h"
 
 class prison: public Case {
 private :
-	string nom ;
+
 public:
 	prison();
 	virtual ~prison();
-	void arreterSur() ;
+	void arreterSur(joueur* joueur) ;
 };
 
 #endif /* PRISON_H_ */
