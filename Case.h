@@ -22,7 +22,7 @@ class Case {
         Case(string nom);
 
         virtual ~Case();
-        void arreterSur(joueur *joueur);
+        void arreterSur(joueur* ptjoueur);
 		string getNom(){return this->nom;};
 		void setNom(string nom){this->nom = nom ;};
 		Case* getSuivante(){return this->suivante;};

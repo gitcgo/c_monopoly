@@ -16,3 +16,6 @@ depart::~depart() {
 	// TODO Auto-generated destructor stub
 }
 
+void depart::arreterSur(joueur* ptjoueur) {
+	*ptjoueur->crediter(200);
+}

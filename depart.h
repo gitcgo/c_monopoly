@@ -16,7 +16,7 @@ private :
 public:
 	depart(string nom,Case* suivante);
 	virtual ~depart();
-	void arreterSur() ;
+	void arreterSur(joueur *ptjoueur) ;
 };
 
 #endif /* DEPART_H_ */
