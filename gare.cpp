@@ -1,7 +1,7 @@
 /*
  * gare.cpp
  *
- *  Created on: 23 déc. 2021
+ *  Created on: 23 d�c. 2021
  *      Author: aveyronvictor
  */
 #include "joueur.h"
@@ -12,6 +12,7 @@ gare::gare(string nom,int loyer , int prixAchat,Case* suivante):propriete(nom,lo
 	this->loyer = loyer;
 	this->prixAchat = prixAchat;
 }
+
 
 void gare::arreterSur(joueur* ptjoueur){
 	if (proprietaire =="none"){
