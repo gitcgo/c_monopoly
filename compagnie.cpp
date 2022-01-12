@@ -7,7 +7,7 @@
 
 #include "compagnie.h"
 
-compagnie::compagnie() {
+compagnie::compagnie(string nom,int loyer , int prixAchat,Case* suivante):propriete(nom,loyer,prixAchat,suivante) {
 	// TODO Auto-generated constructor stub
 
 }

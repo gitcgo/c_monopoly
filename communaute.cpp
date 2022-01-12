@@ -7,7 +7,7 @@
 
 #include "communaute.h"
 
-communaute::communaute() {
+communaute::communaute(string nom, Case* suivante):Case(nom,suivante) {
 	// TODO Auto-generated constructor stub
 
 }
