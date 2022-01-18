@@ -8,8 +8,7 @@
 #include "communaute.h"
 
 communaute::communaute(string nom, Case* suivante):Case(nom,suivante) {
-	// TODO Auto-generated constructor stub
-
+	this->pile_carte_communaute =NULL;
 }
 
 communaute::~communaute() {

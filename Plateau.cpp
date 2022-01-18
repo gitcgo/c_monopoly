@@ -9,7 +9,7 @@
 
 Plateau::Plateau() {
 	// TODO Auto-generated constructor stub
-
+	liste_case = NULL;
 }
 
 Plateau::~Plateau() {
@@ -25,5 +25,5 @@ void Plateau::lierCases() {
 }
 
 Case* Plateau::getCase(int IDCase ){
-	return this->liste_case[IDCase];
+	return &(this->liste_case[IDCase]);
 }
