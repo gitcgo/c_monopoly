@@ -11,6 +11,7 @@ joueur::joueur(string nom,pion Pion ) {
 	this->solde = 1500;
 	this->Pion = Pion;
 	this->Nom = nom;
+	this->carte_liberation =0;
 }
 
 joueur::~joueur() {
