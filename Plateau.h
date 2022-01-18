@@ -18,6 +18,7 @@ public:
 	virtual ~Plateau();
 	void creerCases();
 	void lierCases();
+	Case* getCase(int IDCase );
 };
 
 #endif /* PLATEAU_H_ */
