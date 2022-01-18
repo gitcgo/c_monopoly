@@ -19,7 +19,7 @@ public:
 	chance(string nom, Case* suivante);
 	void setPile_carte_chance(Carte* pile_carte_chance){this->pile_carte_chance =pile_carte_chance;};
 	virtual ~chance();
-	void arreterSur(joueur Joueur) ;
+	void arreterSur(joueur* ptJoueur) ;
 };
 
 #endif /* CHANCE_H_ */

@@ -35,7 +35,7 @@ class pion {
 		void setNom(string nom){this->nom = nom;}; //Définis le nom du pion
 		string getNom(){return this->nom;}; //Return le nom du Pion
 
-		void deplacer(); //Déplace le pion sur le plateau
+		void deplacer(int combien); //Déplace le pion sur le plateau
 };
 
 #endif /* PION_H_ */

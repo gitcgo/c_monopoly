@@ -18,12 +18,17 @@ chance::~chance() {
 	// TODO Auto-generated destructor stub
 }
 
-void chance::arreterSur(joueur Joueur){
+void chance::arreterSur(joueur* ptJoueur){
 	int choixCarte = rand() % (15) ;
+	joueur Joueur = *ptJoueur;
 	Carte CarteTiree = this->pile_carte_chance[choixCarte];
 	Joueur.crediter(CarteTiree.getGain());
 	Joueur.debiter(CarteTiree.getPerte());
-	if (CarteTiree.getDeplacement > 0 ) {
-
+	if ( CarteTiree.getDeplacement() > 0 ) {
+		pion Pion = Joueur.getPion() ;
+		Pion.deplacer(CarteTiree.getDeplacement()*(-1));
 	}
+
+	if
+
 }
