@@ -19,6 +19,7 @@ private :
 	string text;
 public:
 	Carte(string text,int gain = 0 , int perte = 0 ,int deplacemenent= 0,Case* ptTeleportation =NULL);
+    Carte();
 	virtual ~Carte();
 };
 

@@ -16,3 +16,11 @@ Plateau::~Plateau() {
 	// TODO Auto-generated destructor stub
 }
 
+void Plateau::creerCases() {
+
+}
+
+void Plateau::lierCases() {
+
+}
+

@@ -16,3 +16,7 @@ propriete::~propriete() {
 	// TODO Auto-generated destructor stub
 }
 
+void propriete::arreterSur() {
+
+}
+
