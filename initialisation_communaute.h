@@ -25,7 +25,10 @@ Carte* initialisation_communaute(Plateau plateau) {
 	pile_carte_communaute[4] = Carte("Vous gagnez le 2nd prix de beauté, recevez 100 euros",100,0,0);
 	pile_carte_communaute[5] = Carte("Les contributions vous remboursent 20 euros",20,0,0);
 	pile_carte_communaute[6] = Carte("Recevez vos intérêts : 25 euros",25,0,0);
-	pile_carte_communaute[7] = Carte("Retournez à Belleville",0,0,0,plateau.getCase());
+	pile_carte_communaute[7] = Carte("Retournez à Boulevard de Belleville",0,0,0,plateau.getCase(1));
+	pile_carte_communaute[8] = Carte("Aller en prison",0,0,0,plateau.getCase(10));
+	pile_carte_communaute[9] = Carte("Placez vous sur la Case Départ",0,0,0,plateau.getCase(0));
+	pile_carte_communaute[10] = Carte("C'est votre anniversaire. Chaque joueur vous donne ",0,0,0);
 
 
 	return pile_carte_communaute;
