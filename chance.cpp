@@ -28,7 +28,9 @@ void chance::arreterSur(joueur* ptJoueur){
 		pion Pion = Joueur.getPion() ;
 		Pion.deplacer(CarteTiree.getDeplacement()*(-1));
 	}
-
-	if
+	if ( CarteTiree.getText() == "Conservez cette carte pour pouvoir être libéré de prison") {
+		Joueur.setCartePrison(Joueur.getCartePrison());
+	}
+	if ( )
 
 }

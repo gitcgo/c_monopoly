@@ -19,6 +19,7 @@ class joueur {
 		string Nom; //Définir le nom du joueur, c'est pratique si c'est le même que le pion 
 		pion Pion ; //Pointeur vers le pion : le joueur doit savoir où se trouve son pion
 		int solde ; //La THUNE possédée par le joueur
+		int carte_liberation ; // nombre de carte libération de prison que le joeueur possède
 		
 	public:
 		joueur(string nom,pion Pion ); //Constructeur du joueur
@@ -35,6 +36,9 @@ class joueur {
 		void jouer(); //Le joueur réalise un tour de jeu
 		void crediter(int credit); //On donne de l'argent au joueur
 		void debiter(int debit); //On débite de l'argent au joueur
+
+		int getCartePrison(){return this->carte_liberation;};
+		void setCartePrison(int nombre){this->carte_liberation = nombre;};
 };
 
 #endif /* JOUEUR_H_ */
