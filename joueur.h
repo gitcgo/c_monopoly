@@ -21,14 +21,19 @@ class joueur {
 		pion* Pion ;
 		int solde ;
 	public:
-		joueur();
+		joueur(string nom);
 		virtual ~joueur();
+	
 		string getNom(){return this->Nom;};
+	
 		void setPion(pion* Pion){this->Pion =Pion;};
-		pion getPion(){return this->Pion;};
+		pion* getPion(){return this->Pion;};
+	
 		void jouer();
+	
 		void setSolde(int solde ){this->solde=solde;};
 		int getSolde(){return this->solde;};
+	
 		void crediter(int credit);
 		void debiter(int debit);
 };
