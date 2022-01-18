@@ -31,6 +31,8 @@ void chance::arreterSur(joueur* ptJoueur){
 	if ( CarteTiree.getText() == "Conservez cette carte pour pouvoir être libéré de prison") {
 		Joueur.setCartePrison(Joueur.getCartePrison());
 	}
-	if ( )
+	if ( CarteTiree.getText() == "Payer les réparations de vos maisons : 25 € / Maison , 100 € /Hôtel" ) {
+		Joueur.crediter(0); // A remplacer qd hôtel sera là et tout
+	}
 
 }

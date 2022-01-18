@@ -27,7 +27,7 @@ class joueur {
 	
 		string getNom(){return this->Nom;}; //Return le nom du joueur. Pas de setters associé, ce sera défini lors de la création de l'objet Joueur
 	
-		void setPion(pion Pion){this->Pion =Pion;}; //On set le pion du joueur avec tous ses attributs associés
+		void setPion(pion Pion){this->Pion = Pion;}; //On set le pion du joueur avec tous ses attributs associés
 		pion getPion(){return this->Pion;}; //On get le pion du joueur, avec tous ses attributs associés
 	
 		void setSolde(int solde ){this->solde=solde;}; //On set la THUNE du joueur. Utile ?

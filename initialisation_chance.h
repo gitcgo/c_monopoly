@@ -14,7 +14,7 @@
 #include "Plateau.h"
 
 Carte* initialisation_chance(Plateau plateau) {
-	Carte* pile_carte_chance = new Carte[16];
+	Carte* pile_carte_chance = new Carte[15];
 
 	// Je crée chaque carte avec text gain perte deplacement telportation
 	pile_carte_chance[0] = Carte("Allez directement sur la Case Départ",0,0,0,plateau.getCase(0));
@@ -32,7 +32,6 @@ Carte* initialisation_chance(Plateau plateau) {
 	pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Enocre les enbrouilles
 	pile_carte_chance[13] = Carte("Rendez-vous à la Rue de la Paix",0,0,0,plateau.getCase(40)); // NULL à remplacr par #40
 	pile_carte_chance[14] = Carte("La banque vous verse 50 €",50,0,0,NULL);
-	pile_carte_chance[15] = Carte("A cause d'une catastrophe naturelle, veuillez payer des réparations lourdes  : 40 € / Maison , 100 € /Hôtel",0,0,0,NULL);
 
 	return pile_carte_chance ;
 }
