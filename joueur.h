@@ -10,7 +10,6 @@
 #ifndef JOUEUR_H_
 #define JOUEUR_H_
 
-using namespace std;
 #include <iostream>
 #include "Case.h"
 #include "pion.h"
