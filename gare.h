@@ -1,7 +1,7 @@
 /*
  * gare.h
  *
- *  Created on: 23 déc. 2021
+ *  Created on: 23 dÃ©c. 2021
  *      Author: aveyronvictor
  */
 
@@ -13,12 +13,12 @@
 class gare: public propriete {
 private  :
 	string nom ;
+	int nGare;
 public:
-	gare(string nom,int loyer , int prixAchat,Case* suivante);
+	gare(string nom, int ptLoyer, int prixAchat, Case* suivante);
 	virtual ~gare();
 	void setNom(string Nom){this->nom =Nom;};
-	string getNom(){return this->nom;};
-	void arreterSur();
+	void arreterSur(joueur* ptJoueur);
 };
 
 #endif /* GARE_H_ */
