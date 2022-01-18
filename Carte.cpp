@@ -7,11 +7,11 @@
 
 #include "Carte.h"
 
-Carte::Carte(string text,int gain=0, int perte=0,int deplacemenent=0,Case teleportation=NULL) {
+Carte::Carte(string text,int gain, int perte,int deplacemenent,Case* ptTeleportation) {
 	this->gain = gain;
 	this->perte = perte ;
 	this-> deplacemenent = deplacemenent ;
-	this->teleportation = teleportation;
+	this->ptTeleportation = ptTeleportation;
 	this->text = text;
 
 }

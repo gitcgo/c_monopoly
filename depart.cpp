@@ -17,5 +17,6 @@ depart::~depart() {
 }
 
 void depart::arreterSur(joueur* ptjoueur) {
-	*ptjoueur->crediter(200);
+	joueur Joueur = *ptjoueur;
+	Joueur.crediter(200);
 }

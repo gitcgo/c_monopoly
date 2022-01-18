@@ -15,10 +15,10 @@ private :
 	int gain ;
 	int perte ;
 	int deplacemenent;
-	Case teleportation;
+	Case* ptTeleportation;
 	string text;
 public:
-	Carte(string text,int gain = 0 , int perte = 0 ,int deplacemenent= 0,Case teleportation= NULL);
+	Carte(string text,int gain = 0 , int perte = 0 ,int deplacemenent= 0,Case* ptTeleportation =NULL);
 	virtual ~Carte();
 };
 
