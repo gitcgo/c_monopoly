@@ -1,3 +1,4 @@
+
 /*
  * gare.h
  *
@@ -7,7 +8,7 @@
 
 #ifndef GARE_H_
 #define GARE_H_
-
+#include <string>
 #include "propriete.h"
 
 class gare: public propriete {
@@ -19,6 +20,7 @@ public:
 	virtual ~gare();
 	void setNom(string Nom){this->nom =Nom;};
 	void arreterSur(joueur* ptJoueur);
+	string getNom(){return this->nom;};
 };
 
 #endif /* GARE_H_ */

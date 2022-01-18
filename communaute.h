@@ -11,13 +11,16 @@
 #include "Case.h"
 #include <iostream>
 #include "joueur.h"
+#include "Carte.h"
 using namespace std;
 
 class communaute: public Case {
 	private :
 		string nom ;
+		Carte* pile_carte_communaute;
 	public:
 		communaute(string nom, Case* suivante);
+		void setPile_carte_commmuanute(Carte* pile_carte_communaute){this->pile_carte_communaute =pile_carte_communaute;};
 		virtual ~communaute();
 		void arreterSur(joueur* joueur) ;
 };
