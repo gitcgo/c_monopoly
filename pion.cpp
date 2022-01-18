@@ -7,12 +7,15 @@
 
 #include "pion.h"
 
-pion::pion() {
-	// TODO Auto-generated constructor stub
-
+pion::pion(string nom) {
+	this->nom=nom;
 }
 
 pion::~pion() {
-	// TODO Auto-generated destructor stub
+	// Destructeur automatique. Le pion reste utile jusqu'à la toute fin du jeu.
 }
+
+//pion::deplacer(){
+
+//}
 
