@@ -31,6 +31,9 @@ Carte* initialisation_communaute(Plateau plateau) {
 	pile_carte_communaute[10] = Carte("C'est votre anniversaire. Chaque joueur vous donne 20 euros.");
 	pile_carte_communaute[11] = Carte("Recevez 100 euros",100);
 	pile_carte_communaute[12] = Carte("Payez une amende de 10 euros ou tirez une carte chance");
+	pile_carte_communaute[13] = Carte("Erreur de la banque en votre faveur, recevez 200 euros",200);
+	pile_carte_communaute[14] = Carte("Vente de votre stock, recevez 50 euros",50);
+	pile_carte_communaute[15] = Carte("Payez les frais d'hôpital : 100 euros",0,100);
 
 	return pile_carte_communaute;
 }
