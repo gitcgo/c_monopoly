@@ -14,9 +14,10 @@
 class chance: public Case {
 private :
 	string nom ;
-	Carte pile_carte_chance ;
+	Carte* pile_carte_chance ;
 public:
 	chance(string nom, Case* suivante);
+	void setPile_carte_chance(Carte* pile_carte_chance){this->pile_carte_chance =pile_carte_chance};
 	virtual ~chance();
 	void arreterSur() ;
 };

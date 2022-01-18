@@ -6,8 +6,10 @@
  */
 
 #include "chance.h"
+#include "initialisation_chance.h"
 
 chance::chance(string nom, Case* suivante):Case(nom,suivante) {
+	this->pile_carte_chance = NULL;
 
 }
 

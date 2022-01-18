@@ -18,7 +18,7 @@ Carte* initialisation_chance(Plateau plateau) {
 	depart* ptDepart1 = &depart("depart 1",NULL);
 
 	// Je crée chaque carte avec text gain perte deplacement telportation
-	pile_carte_chance[0] = Carte("Alllez directement sur la Case Départ",NULL,NULL,NULL,ptDepart1);
+	pile_carte_chance[0] = Carte("Allez directement sur la Case Départ",NULL,NULL,NULL,ptDepart1);
 	pile_carte_chance[1] = Carte("Interpol vous arrête, rendez-vous en prison sans passer par la case départ",0,0,0); // A remplacer par la case prison
 	pile_carte_chance[2] = Carte("Rendez-vous au Boulevard de la Villette",0,0,0); // NULL à remplacer par case 11 du plateau
 	pile_carte_chance[3] = Carte("Vous recevez un e amende pour conduite en état d'ivresse, payer 20 €",0,20);
@@ -33,7 +33,7 @@ Carte* initialisation_chance(Plateau plateau) {
 	pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Enocre les enbrouilles
 	pile_carte_chance[13] = Carte("Rendez-vous à la Rue de la Paix",0,0,0,NULL); // NULL à remplacr par #40
 	pile_carte_chance[14] = Carte("La banque vous verse 50 €",50,0,0,NULL);
-	pile_carte_chance[15] = Carte("A cause d'une catastrophe naturelles, veuillez payer des réparations lourdes  : 40 € / Maison , 100 € /Hôtel",0,0,0,NULL);
+	pile_carte_chance[15] = Carte("A cause d'une catastrophe naturelle, veuillez payer des réparations lourdes  : 40 € / Maison , 100 € /Hôtel",0,0,0,NULL);
 
 	return pile_carte_chance ;
 }
