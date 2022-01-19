@@ -1,7 +1,7 @@
 /*
  * propriete.h
  *
- *  Created on: 23 déc. 2021
+ *  Created on: 23 dÃ©c. 2021
  *      Author: aveyronvictor
  */
 
@@ -13,18 +13,21 @@
 class propriete: public Case {
 protected :
 	string nom ;
-	int loyer ;
+	int* ptLoyer [6];
 	int prixAchat ;
+	joueur* ptProprietaire;
 public:
-	propriete(string nom,int loyer , int prixAchat,Case* suivante);
+	propriete(string nom, int* ptLoyer, int prixAchat, Case* suivante);
 	virtual ~propriete();
 	void arreterSur() ;
 	string getNom(){return this->nom;};
 	void setNom(string Nom){this->nom=Nom;};
-	int getLoyer(){return this->loyer;};
-	void setLoyer(int loyer){this->loyer = loyer;};
+	int* getLoyer(){return this->ptLoyer;};
+	void setLoyer(int* ptLoyer){this->ptLoyer = ptLoyer;};
 	void setPrixAchat(int prix){this->prixAchat = prix;};
 	int getPrixAchat(){return this->prixAchat;};
+	void SetProprietaire(joueur* ptProprietaire){this->ptProprietaire = ptProprietaire;};
+	joueur* GetProprietaire(){return this->ptProprietaire;};
 };
 
 #endif /* PROPRIETE_H_ */

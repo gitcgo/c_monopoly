@@ -1,7 +1,7 @@
 /*
  * Terrain.h
  *
- *  Created on: 23 déc. 2021
+ *  Created on: 23 dÃ©c. 2021
  *      Author: aveyronvictor
  */
 
@@ -13,15 +13,14 @@
 class Terrain: public propriete {
 private :
 	string nom;
-	string couleur ;
-	int loyer;
-	int prixAchat;
+	string couleur;
+	int nMaison;
 public:
-	Terrain(string nom, int loyer, int prixAchat,string couleur, Case* suivante);
+	Terrain(string nom, int prixAchat, string couleur, Case* suivante, joueur* proprietaire);
 	virtual ~Terrain();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};
-	void arreterSur();
+	void arreterSur(joueur* ptJoueur);
 };
 
 #endif /* TERRAIN_H_ */
