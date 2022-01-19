@@ -7,12 +7,15 @@
 
 #include "propriete.h"
 
-propriete::propriete(string nom, int* ptLoyer, int prixAchat, Case* suivante):Case(nom,suivante) {
+propriete::propriete(string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietair):Case(nom,suivante) {
 	this->nom = nom;
 	this->ptLoyer =ptLoyer ;
 	this->prixAchat = prixAchat;
+	this->ptProprietaire =ptProprietair ;
 }
 
 propriete::~propriete() {
 	// TODO Auto-generated destructor stub
 }
+
+
