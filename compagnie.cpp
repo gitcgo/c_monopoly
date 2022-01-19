@@ -7,7 +7,7 @@
 
 #include "compagnie.h"
 
-compagnie::compagnie(string nom,int loyer , int prixAchat, Case* suivante,joueur* ptProprietaire):propriete(nom,loyer,prixAchat,suivante) {
+compagnie::compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante,joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante) {
 	// TODO Auto-generated constructor stub
 	this->ptProprietaire =NULL;
 }
@@ -34,9 +34,13 @@ void compagnie::arreterSur(joueur* ptJoueur, gobelet Gobelet) {
 			}
 		}
 		else{
+			int multiplicateur = 4 ;
+			if (1){// a remplacer pare fonction de check couleur
+				multiplicateur = 12;
+			}
 
-			int loyer = 4 * Gobelet.getValeur() ; //On adapte le loyer en fonction du nombre de maison qu'il y a (ptLoyer[0]->0 maison et ptLoyer[5]->1 hotel)
+			int loyer = multiplicateur * Gobelet.getValeur() ; //On adapte le loyer en fonction du nombre de maison qu'il y a (ptLoyer[0]->0 maison et ptLoyer[5]->1 hotel)
 			cout << "Vous êtes tombé sur la case " << this->nom << ", vous devez payer "<< loyer << " € ."<< endl;
 			Joueur.crediter(loyer);
-			ptJoueur->debiter(loyer);
+			ptJoueur->debiter(loyer);}
 }

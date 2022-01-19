@@ -33,9 +33,5 @@ void Terrain::arreterSur(joueur* ptJoueur){
 		cout << "Vous êtes tombé sur la case " << this->nom << ", vous devez payer "<< loyer << " € ."<< endl;
 		Joueur.crediter(loyer);
 		ptJoueur->debiter(loyer);
-}
+};
 
-
-Terrain::~Terrain() {
-	// TODO Auto-generated destructor stub
-}
