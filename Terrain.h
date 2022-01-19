@@ -16,7 +16,7 @@ private :
 	string couleur;
 	int nMaison;
 public:
-	Terrain(string nom,  string couleur, int prixAchat, int* ptLoyer, Case* suivante, joueur* ptProprietaire);
+	Terrain(string nom, int* ptLoyer, int prixAchat, string couleur, Case* suivante, joueur* ptProprietaire);
 	virtual ~Terrain();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};
