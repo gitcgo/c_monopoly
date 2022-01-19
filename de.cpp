@@ -19,5 +19,4 @@ de::~de() {
 
 void de::lancer() {
 	this->valeur = rand() % (this->nbFaces - 1) + 1; // On lance un dé et on actualise la valeur du dé
-
 }
