@@ -1,27 +1,18 @@
-/*
- * compagnie.h
- *
- *  Created on: 23 déc. 2021
- *      Author: aveyronvictor
- */
-
 #ifndef COMPAGNIE_H_
 #define COMPAGNIE_H_
-
+#include "de.h"
 #include "propriete.h"
-#include "gobelet.h"
-#include "joueur.h"
 
 class compagnie: public propriete {
 private :
 	string nom;
-	joueur* ptProprietaire;
+	int nCompagnie;
 public:
-	compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante,joueur* ptProprietaire=NULL);
+	compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante, joueur* ptProprietaire);
 	virtual ~compagnie();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};
-	void arreterSur(joueur* Joueur, gobelet Gobelet);
+	void arreterSur(joueur* ptJoueur);
 };
 
 #endif /* COMPAGNIE_H_ */
