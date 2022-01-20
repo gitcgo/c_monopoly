@@ -9,18 +9,21 @@
 #define TERRAIN_H_
 #include <string>
 #include "propriete.h"
+#include "couleur.h"
 
 class Terrain: public propriete {
 private :
 	string nom;
-	string couleur;
+	couleur* Couleur;
 	int nMaison;
 public:
-	Terrain(string nom, int* ptLoyer, int prixAchat, string couleur, Case* suivante, joueur* ptProprietaire);
+	Terrain(string nom, int* ptLoyer, int prixAchat, string couleur=NULL, Case* suivante=NULL, joueur* ptProprietaire=NULL);
 	virtual ~Terrain();
 	void setNom(string Nom){this->nom =Nom;};
 	string getNom(){return this->nom;};
 	void arreterSur(joueur* ptJoueur);
+	couleur* getCouleur(){return this->Couleur;};
+	void setCouleur(couleur* Couleur){this->Couleur = Couleur;};
 };
 
 #endif /* TERRAIN_H_ */

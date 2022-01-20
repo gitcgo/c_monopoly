@@ -8,7 +8,6 @@
 #include "propriete.h"
 
 propriete::propriete(string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietaire):Case(nom,suivante) {
-	this->nom = nom;
 	this->ptLoyer =ptLoyer ;
 	this->prixAchat = prixAchat;
 	this->ptProprietaire = ptProprietaire;
