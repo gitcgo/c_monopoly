@@ -10,6 +10,7 @@
 
 #include "propriete.h"
 #include "joueur.h"
+#include "gare.h"
 
 class couleur {
 private:
@@ -17,12 +18,14 @@ private:
 	string nom;
 	int longueur ;
 public:
+	couleur();
 	couleur(string nom,int longueur, propriete* liste_propriete= NULL);
 	propriete* getListePropriete(){return this->liste_propriete;};
 	string getNom(){return this->nom;};
 	int getLongueur(){return this->longueur;};
 	bool check_monopole(joueur* ptJoueur);
 	virtual ~couleur();
+	int checkgare();
 };
 
 #endif /* COULEUR_H_ */

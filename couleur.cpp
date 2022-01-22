@@ -7,6 +7,13 @@
 
 #include "couleur.h"
 
+couleur::couleur(){
+	this->nom = "No Name";
+	this->longueur =0 ;
+	this->liste_propriete = NULL ;
+
+}
+
 couleur::couleur(string nom,int longueur, propriete* liste_propriete) {
 	// TODO Auto-generated constructor stub
 	this->nom = nom;

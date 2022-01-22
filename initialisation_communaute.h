@@ -14,8 +14,8 @@
 #include "Plateau.h"
 
 Carte* initialisation_communaute(Plateau plateau) {
+
 	Carte* pile_carte_communaute = new Carte[16];
-	depart belleville = depart("depart 1",NULL);
 
 	// Je crée chaque carte avec text gain perte deplacement telportation
 	pile_carte_communaute[0] = Carte("Payez le police d'assurance : 50 euros",0,50);

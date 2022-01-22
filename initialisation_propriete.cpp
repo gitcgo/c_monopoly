@@ -294,8 +294,8 @@ couleur* initialisation_propriete () {
 	liste_terrain_ver[2] = ter20;
 				
 	Terrain* liste_terrain_bleu = new Terrain[2];
-	liste_terrain_ble[0] = ter21;
-	liste_terrain_ble[1] = ter22;
+	liste_terrain_bleu[0] = ter21;
+	liste_terrain_bleu[1] = ter22;
 	
 	
 	// On peut maintenant initialiser les couleurs comme objets contenant la liste de terrains de leur couleur
@@ -306,7 +306,7 @@ couleur* initialisation_propriete () {
 	couleur Rouge= couleur("rouge",2,liste_terrain_rou);
 	couleur Jaune= couleur("jaune",2,liste_terrain_jau);
 	couleur Vert= couleur("vert",2,liste_terrain_ver);
-	couleur Bleu = couleur("bleu",2,liste_terrain_);
+	couleur Bleu = couleur("bleu",2,liste_terrain_bleu);
 		
 	//On peut maintenant créer la liste des couleurs : 
 	liste_couleur[0] = Brun;

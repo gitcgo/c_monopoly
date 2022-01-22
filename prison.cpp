@@ -7,18 +7,21 @@
 
 #include "prison.h"
 
-prison::prison() :
-    Case("Prison")
-	// TODO Auto-generated constructor stub
-{}
+prison::prison(string nom, Case* suivante):Case(nom,suivante){
+
+}
 
 
 prison::~prison() {
 	// TODO Auto-generated destructor stub
 }
 
-void prison::arreterSur(joueur *joueur) {
-    (joueur->getPion()).setPosition(case_prison);
+void prison::arreterSur(joueur* ptJoueur) {
+	// Je pens eque ça sera géré avant dans le main
+	joueur Joueur = *ptJoueur ;
+	bool incarcere = Joueur.getPrison();
+
+    ;
 }
 
 

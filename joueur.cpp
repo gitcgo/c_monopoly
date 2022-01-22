@@ -12,6 +12,8 @@ joueur::joueur(string nom,pion Pion ) {
 	this->Pion = Pion;
 	this->Nom = nom;
 	this->carte_liberation =0;
+	this->prison = false ;
+	this->temps_prison = 0 ;
 }
 
 joueur::~joueur() {

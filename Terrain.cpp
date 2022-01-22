@@ -7,8 +7,13 @@
 
 #include "Terrain.h"
 
-Terrain::Terrain(string nom, int* ptLoyer, int prixAchat, string couleur, Case* suivante, joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante, ptProprietaire) {
-	this->couleur = couleur;
+Terrain::Terrain():propriete("temporaire",NULL,0,NULL,NULL){
+	this->Couleur = NULL;
+	this->nMaison = 0 ;
+}
+
+Terrain::Terrain(string nom, int* ptLoyer, int prixAchat, couleur* Couleur, Case* suivante, joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante, ptProprietaire) {
+	this->Couleur = Couleur;
 	this->nMaison = 0;
 }
 

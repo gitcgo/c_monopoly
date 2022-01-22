@@ -13,7 +13,7 @@
 
 class taxe: public Case {
 public:
-	taxe(string nom, Case* suivante);
+	taxe(string nom, Case* suivante=NULL);
 	virtual ~taxe();
 	void arreterSur(joueur* ptJoueur);
 };

@@ -9,15 +9,18 @@
 #define GARE_H_
 
 #include "propriete.h"
+#include "gares.h"
 
 class gare: public propriete {
 private  :
-	string nom ;
-	int nGare;
+	gares liste_gares ;
+
 public:
-	gare(string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietaire);
+	gare();
+	gare(string nom, int prixAchat=200, Case* suivante=NULL, joueur* ptProprietaire=NULL,int* ptLoyer = NULL,gares liste_gares = NULL);
 	virtual ~gare();
 	void setNom(string Nom){this->nom =Nom;};
+	void setListeGares(gares listes){this->liste_gares = listes ; };
 	void arreterSur(joueur* ptJoueur);
 };
 

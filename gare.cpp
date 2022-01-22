@@ -7,8 +7,19 @@
 #include "joueur.h"
 #include "gare.h"
 
-gare::gare(string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietaire):propriete(nom,ptLoyer,prixAchat,suivante, ptProprietaire) {
-	this->nGare = 0;
+gare::gare():propriete("undefinied",NULL,200,NULL,NULL){
+	this->liste_gares = NULL;
+
+}
+
+gare::gare(string nom, int prixAchat, Case* suivante, joueur* ptProprietaire,int* ptLoyer,gares liste_gares):propriete(nom,ptLoyer,prixAchat,suivante, ptProprietaire) {
+	int* loyers = new int[4];
+	loyers[0] = 25 ;
+	loyers[1] = 50 ;
+	loyers[2] = 100 ;
+	loyers[3] = 200 ;
+	this->ptLoyer = loyers;
+	this->liste_gares = liste_gares;
 }
 
 void gare::arreterSur(joueur* ptJoueur){
@@ -22,11 +33,12 @@ void gare::arreterSur(joueur* ptJoueur){
 			this->ptProprietaire = ptJoueur; // On signale à la gare qu'elle à desormais un nouveau proprio
 		} //Il faut ajouter la propriÃ©tÃ© Ã  la liste des propriÃ©tÃ©s du joueur.
 		else{
-			cout<< "Vous avez dÃ©cidÃ© de ne pas acheter cette propriÃ©tÃ©"<<endl;
+			cout<< "Vous avez décidé de ne pas acheter cette propriété"<<endl;
 		}
 	}
 	else{
-		int loyer = ptLoyer[ptJoueur.getGare()-1]; //Fonction qui n'existe pas pour l'instant: elle va chercher le nombre de gare que possede un joueur. On fait -1 car ptLoyer est une liste qui commence à 0.
+		int nbr_gares = this->liste_gares.checkMonopole(ptJoueur);
+		int loyer = ptLoyer[nbr_gares]; //Fonction qui n'existe pas pour l'instant: elle va chercher le nombre de gare que possede un joueur. On fait -1 car ptLoyer est une liste qui commence à 0.
 		//Le prix est diffÃ©rent en fonction du nombre de gare que le propriÃ©taire possÃ¨de.
 		cout << "Le proprietaire de cette case est "<< ptProprietaire << " vous lui devez " << loyer<<endl;
 		ptJoueur->debiter(loyer); //le joueur paye le locataire le prix du loyer
