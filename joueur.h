@@ -22,7 +22,6 @@ class joueur {
 		bool prison ; // Si le joueur est ecutellement en prison
 		int temps_prison ; // indique l enombre de tours depusi que le joueur est enferpe en prison
 		int carte_liberation ; // nombre de carte libération de prison que le joeueur possède
-        bool en_prison ;
 		
 	public:
 		joueur();
@@ -33,8 +32,7 @@ class joueur {
 	
 		void setPion(pion Pion){this->Pion = Pion;}; //On set le pion du joueur avec tous ses attributs associés
 		pion getPion(){return this->Pion;}; //On get le pion du joueur, avec tous ses attributs associés
-	
-		void setSolde(int solde ){this->solde=solde;}; //On set la THUNE du joueur. Utile ?
+
 		int getSolde(){return this->solde;}; //On get la THUNE du joueur.
 	
 		void jouer(); //Le joueur réalise un tour de jeu

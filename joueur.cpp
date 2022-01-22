@@ -8,8 +8,7 @@
 #include "joueur.h"
 
 joueur::joueur(){
-	this->solde = 0;
-	this->Pion = NULL;
+	this->solde = 1500;
 	this->Nom = "undefinied";
 	this->carte_liberation =0;
 	this->prison = false ;
@@ -17,7 +16,6 @@ joueur::joueur(){
 }
 
 joueur::joueur(string nom,pion Pion ) {
-    this->en_prison = false;
 	this->solde = 1500;
 	this->Pion = Pion;
 	this->Nom = nom;
@@ -36,10 +34,14 @@ void joueur::crediter(int credit){ //Un joueur reçoit une certaine somm
 
 void joueur::debiter(int debit){ //Un joueur se fait débiter une certaine somme
     this->solde -= debit;
-    if (true) {}
+    if (solde<=0) {
+        cout << Nom << " a fait banqueroute !" << endl;
+    }
 }
 
 
 void joueur::jouer(){
-	
+    if (solde > 0) {
+
+    }
 }
