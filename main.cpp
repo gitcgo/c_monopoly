@@ -38,7 +38,10 @@ int main() {
 
 	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
 
+
+
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
+
 		string nomJoueur;
 		cout << "Comment s'appelle le Joueur " << (string) i << "?" << endl;
 		cin << nomJoueur ;
@@ -54,8 +57,25 @@ int main() {
 
 		listeJoueur[i] = Joueur;
 		Pion.setJoueur(&Joueur);
-		Pion.setPosition(truc)
+		Pion.setPosition(truc);
 	}
+
+	jeu Jeu = jeu();
+
+
+	// initialisation de la case des joueurs
+
+	// On commence la partie
+
+	while (Jeu.getCompteur() < 100 )  {
+		for (int i = 0 ; i < nmbrJoueur ; i ++){
+			joueur Joueur = listeJoueur[i];
+			Joueur.jouer();
+		}
+	}
+
+	gobelet Gobelet = gobelet();
+
 
 
 
