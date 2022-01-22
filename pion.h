@@ -24,6 +24,7 @@ class pion {
 		string nom ; //Nom du pion
 	public:
 		pion(); //Constructeur du pion
+		pion(string nom);
 		virtual ~pion(); //Destructeur du pion, inutile s'il reste jusqu'à la fin de la partie mais on le laisse pour la beauté du geste
 
 		void setJoueur ( joueur* Joueur ) {this->ptJoueur = Joueur;}; //Définis quel joueur possède ce pion

@@ -6,8 +6,9 @@
 class compagnie: public propriete {
 private :
 	string nom;
-	int nCompagnie;
+
 public:
+	compagnie();
 	compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante, joueur* ptProprietaire);
 	virtual ~compagnie();
 	void setNom(string Nom){this->nom =Nom;};

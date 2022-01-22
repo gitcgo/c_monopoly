@@ -19,10 +19,13 @@ class joueur {
 		string Nom; //Définir le nom du joueur, c'est pratique si c'est le même que le pion 
 		pion Pion ; //Pointeur vers le pion : le joueur doit savoir où se trouve son pion
 		int solde ; //La THUNE possédée par le joueur
+		bool prison ; // Si le joueur est ecutellement en prison
+		int temps_prison ; // indique l enombre de tours depusi que le joueur est enferpe en prison
 		int carte_liberation ; // nombre de carte libération de prison que le joeueur possède
         bool en_prison ;
 		
 	public:
+		joueur();
 		joueur(string nom,pion Pion ); //Constructeur du joueur
 		virtual ~joueur(); //Destructeur mais qu'on utilisera sûrement pas : le joueur reste là jusqu'à la fin du jeu
 	
@@ -40,6 +43,9 @@ class joueur {
 
 		int getCartePrison(){return this->carte_liberation;};
 		void setCartePrison(int nombre){this->carte_liberation = nombre;};
+
+		void entrerPrison(){ this->prison =true; this->temps_prison = 0 ; } // Rajouter TELEPORTATION PRISON
+		bool getPrison(){return this->prison;};
 };
 
 #endif /* JOUEUR_H_ */

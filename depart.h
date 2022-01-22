@@ -14,7 +14,7 @@ class depart: public Case {
 private :
 	string nom ;
 public:
-	depart(string nom,Case* suivante);
+	depart(string nom,Case* suivante=NULL);
 	virtual ~depart();
 	void arreterSur(joueur *ptjoueur) ;
 };

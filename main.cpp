@@ -30,6 +30,35 @@ using namespace std;
 
 int main() {
 
+	cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corenton" << endl ;
+	int nmbrJoueur ;
+	cout << "Veuiller entrer le nombre de joueur : " << endl ;
+	cin >> nmbrJoueur ;
+	joueur* listeJoueur = new joueur[nmbrJoueur];
+
+	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
+
+	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
+		string nomJoueur;
+		cout << "Comment s'appelle le Joueur " << (string) i << "?" << endl;
+		cin << nomJoueur ;
+		string nomPion ;
+		cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " << (string) nmbrJoueur << endl ;
+		cin >> nomPion ;
+
+		pion* ptPion = new pion(nomPion);
+		pion Pion = *ptPion ;
+
+		joueur* ptJoueur = new joueur(nomJoueur,Pion);
+		joueur Joueur = *ptJoueur;
+
+		listeJoueur[i] = Joueur;
+		Pion.setJoueur(&Joueur);
+		Pion.setPosition(truc)
+	}
+
+
+
 
 	return 0;
 }

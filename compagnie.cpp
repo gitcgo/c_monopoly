@@ -7,6 +7,10 @@
 
 #include "compagnie.h"
 
+compagnie::compagnie():propriete("undefinied",NULL,0,NULL){
+
+}
+
 compagnie::compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante,joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante) {
 	// TODO Auto-generated constructor stub
 	this->ptProprietaire =NULL;

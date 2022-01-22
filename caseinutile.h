@@ -12,7 +12,7 @@
 
 class case_inutile: public Case {
 public:
-	case_inutile(string nom, Case* suivante);
+	case_inutile(string nom, Case* suivante=NULL);
 	virtual ~case_inutile();
 	void arreterSur(){};
 };

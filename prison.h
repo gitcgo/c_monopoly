@@ -15,9 +15,9 @@ class prison: public Case {
 private :
 
 public:
-	prison();
+	prison(string nom, Case* suivante=NULL);
 	virtual ~prison();
-	void arreterSur(joueur* joueur) ;
+	void arreterSur(joueur* ptJoueur) ;
 };
 
 #endif /* PRISON_H_ */

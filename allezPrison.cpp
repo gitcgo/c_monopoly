@@ -1,0 +1,21 @@
+/*
+ * allezPrison.cpp
+ *
+ *  Created on: 22 janv. 2022
+ *      Author: aveyronvictor
+ */
+
+#include "allezPrison.h"
+
+allezPrison::allezPrison(string nom, Case* suivante):Case(nom,suivante) {
+	// TODO Auto-generated constructor stub
+}
+
+allezPrison::~allezPrison() {
+	// TODO Auto-generated destructor stub
+}
+
+void allezPrison::arretrSur(joueur* ptJoueur){
+	joueur Joueur = *ptJoueur ;
+	Joueur.entrerPrison();
+}
