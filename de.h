@@ -10,7 +10,7 @@
 
 class de {
 private :
-	int nbFaces;
+	const static int nbFaces = 6;
 	int valeur;
 public:
 	de();

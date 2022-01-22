@@ -29,19 +29,14 @@ joueur::joueur(string nom,pion Pion ) {
 joueur::~joueur() {
 }
 
-void joueur::crediter(int credit){ //Un joueur reçoit une certaine somme
-	
-	solde = getSolde(); //On va cherche la solde possédée
-	int newSolde = solde + credit; //On y ajoute le crédit
-	setSolde(newSolde); //On met à jour la solde du joueur
+void joueur::crediter(int credit){ //Un joueur reçoit une certaine somm
+	this->solde += credit;
 }
 
 
 void joueur::debiter(int debit){ //Un joueur se fait débiter une certaine somme
-	
-	solde = getSolde(); //On va chercher sa solde possédée
-	int newSolde = solde - debit; //On y retranche la valeur indiquée
-	setSolde(newSolde); //On met a jour la solde du joueur
+    this->solde -= debit;
+    if (true) {}
 }
 
 

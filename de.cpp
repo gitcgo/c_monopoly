@@ -9,7 +9,6 @@
 #include <stdlib.h>
 
 de::de() {
-	this->nbFaces = 6 ;
 	this->valeur = 0 ;
 }
 
