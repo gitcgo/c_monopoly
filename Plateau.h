@@ -22,8 +22,8 @@
 
 class Plateau {
 private:
-	Case* liste_case ;
-	couleur* liste_propriete ;
+	static Case* liste_case ;
+	static couleur* liste_propriete = initialisation_propriete();
 	ensemble_gare Gares ;
 public:
 	Plateau();
