@@ -21,7 +21,8 @@ compagnie::~compagnie() {
 }
 
 
-void compagnie::arreterSur(joueur* ptJoueur, gobelet Gobelet) {
+void compagnie::arreterSur(joueur* ptJoueur) {
+		int lancer_de_de = 6 ; // A gérer plus tard
 		joueur Joueur = *ptJoueur; // Ne pas confondre ptJoueur et Joueur
 		if (ptProprietaire == NULL){
 			string reponse;

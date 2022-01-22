@@ -321,7 +321,6 @@ couleur* initialisation_propriete () {
 	liste_compagnie[0] = compagnie1;
 	liste_compagnie[1] = compagnie2;
 
-	couleur Gare = couleur("gare",4,liste_gare);
 
 	
 	// On peut maintenant initialiser les couleurs comme objets contenant la liste de terrains de leur couleur

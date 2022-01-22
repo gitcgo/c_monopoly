@@ -16,15 +16,14 @@
 #include "caseinutile.h"
 #include "communaute.h"
 #include "chance.h"
-#include "ensemble_gare.h"
 #include "taxe.h"
 #include "gare.h"
+#include "compagnie.h"
 
 class Plateau {
 private:
-	static Case* liste_case ;
-	static couleur* liste_propriete = initialisation_propriete();
-	ensemble_gare Gares ;
+	Case* liste_case ;
+	couleur* liste_propriete ;
 public:
 	Plateau();
 	virtual ~Plateau();

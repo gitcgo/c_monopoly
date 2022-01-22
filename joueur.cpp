@@ -5,6 +5,7 @@
  *      Author: aveyronvictor
  */
 
+#include "compagnie.h"
 #include "joueur.h"
 
 joueur::joueur(){
@@ -43,6 +44,7 @@ bool joueur::isOut(){
 }
 
 void joueur::jouer(){
+
     if (solde > 0) {
 
     }

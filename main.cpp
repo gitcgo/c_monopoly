@@ -69,18 +69,14 @@ int main() {
 
 	static gobelet Gobelet = gobelet();
 
+
+
 	while (Jeu.getCompteur() < 100 )  {
 		for (int i = 0 ; i < nmbrJoueur ; i ++){
 			joueur Joueur = listeJoueur[i];
 			Joueur.jouer();
 		}
 	}
-
-
-
-
-
-
 
 	return 0;
 }
