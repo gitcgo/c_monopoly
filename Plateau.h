@@ -29,7 +29,7 @@ public:
 	Plateau();
 	virtual ~Plateau();
 	void creerCases();
-	void lierCases();
+	//void lierCases();
 	Case* getCase(int IDCase );
 	Carte* initialisation_cartes_chance();
 	Carte* initialisation_cartes_communaute();
