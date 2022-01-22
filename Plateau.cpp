@@ -67,11 +67,57 @@ void Plateau::creerCases() {
 	couleur* liste_propriete = initialisation_propriete(); // merci corentin
 
 	this->liste_propriete = liste_propriete;
+	
+	//liaison de toutes les cases (liste chainée)
+	
+	depart.SetSuivante(&ter1);
+	ter1.Setsuivante(&communaute1);
+	communaute1.Setsuivante(&ter2);
+	ter2.Setsuivante(&impot);
+	impot.Setsuivante(&gare1);
+	gare1.Setsuivante(&ter3);
+	ter3.Setsuivante(&chance1);
+	chance.Setsuivante(&ter4);
+	ter4.Setsuivante(&ter5);
+	ter5.Setsuivante(&Prison);
+
+	Prison.Setsuivante(&ter6);
+	ter6.Setsuivante(&compagnie1);
+	compagnie1.Setsuivante(&ter7);
+	ter7.Setsuivante(&ter8);
+	ter8.Setsuivante(&gare2);
+	gare2.Setsuivante(&ter9);
+	ter9.Setsuivante(&communaute2);
+	communaute2.Setsuivante(&ter10);
+	ter10.Setsuivante(&ter11);
+	ter11.Setsuivante(&parc_gratuit);
+	parc_gratuit.Setsuivante(&ter12);
+
+	ter12.Setsuivante(&chance2);
+	chance2.Setsuivante(&ter13);
+	ter13.Setsuivante(&ter14);
+	ter14.Setsuivante(&gare3);
+	gare3.Setsuivante(&ter15);
+	ter15.Setsuivante(&ter16);
+	ter16.Setsuivante(&compagnie2);
+	compagnie2.Setsuivante(&ter17);
+	ter17.Setsuivante(&police);
+	police.Setsuivante(&ter18);
+
+	ter18.Setsuivante(&ter19);
+	ter19.Setsuivante(&communaute3);
+	communaute3.Setsuivante(&ter20);
+	ter20.Setsuivante(&gare4);
+	gare4.Setsuivante(&chance3);
+	chance3.Setsuivante(ter21);
+	ter21.Setsuivante(&luxe);
+	luxe.Setsuivante(&ter22);
+	ter22.Setsuivante(&depart);
+
+	this->liste_case = &depart;
 }
 
-void Plateau::lierCases() {
-
-}
+//void Plateau::lierCases() {}. On vire cette méthode pour l'instant
 
 Case* Plateau::getCase(int IDCase ){
 	return &(this->liste_case[IDCase]);
