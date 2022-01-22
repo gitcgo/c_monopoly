@@ -15,6 +15,7 @@
 #include "propriete.h"
 #include "couleur.h"
 #include "Terrain.h"
+#include "Gare.h"
 
 couleur* initialisation_propriete () {
 	couleur* liste_couleur = new couleur[9];
@@ -297,6 +298,21 @@ couleur* initialisation_propriete () {
 	liste_terrain_bleu[0] = ter21;
 	liste_terrain_bleu[1] = ter22;
 	
+
+	gare* liste_gare = new gare[4];
+
+	gare gare1 = gare("Gare Montparnasse");
+	gare gare2 = gare("Gare de Lyon");
+	gare gare3 = gare("Gare du Nord");
+	gare gare4 = gare("Gare Saint-Lazare");
+
+	liste_gare[0] = gare1;
+	liste_gare[1] = gare2;
+	liste_gare[2] = gare3;
+	liste_gare[3] = gare4;
+
+	couleur Gare = couleur("gare",4,liste_gare);
+
 	
 	// On peut maintenant initialiser les couleurs comme objets contenant la liste de terrains de leur couleur
 	couleur Brun = couleur("brun",2,liste_terrain_bru);
@@ -317,6 +333,7 @@ couleur* initialisation_propriete () {
 	liste_couleur[5] = Jaune;
 	liste_couleur[6] = Vert;
 	liste_couleur[7] = Bleu;
+	liste_couleur[8] = Gare;
 
 	// Et on peut maintenant affecter une couleur à chaque terrain : 
 	ter1.setCouleur(&(liste_couleur[0]));

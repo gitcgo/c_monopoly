@@ -59,19 +59,22 @@ void Plateau::creerCases() {
 
 	// initialisation de toutes les proprietes et gare
 
-	gare* liste_gares = new gare[4] ;
+	gare* liste_gare = new gare[4];
 
-	liste_gares[0] = gare("Gare Montparnasse");
-	liste_gares[1] = gare("Gare de Lyon");
-	liste_gares[2] = gare("Gare du Nord");
-	liste_gares[3] = gare("Gare Saint-Lazare");
+	gare gare1 = gare("Gare Montparnasse");
+	gare gare2 = gare("Gare de Lyon");
+	gare gare3 = gare("Gare du Nord");
+	gare gare4 = gare("Gare Saint-Lazare");
 
-	gares Gares = gares(liste_gares);
+	liste_gare[0] = gare1;
+	liste_gare[1] = gare2;
+	liste_gare[2] = gare3;
+	liste_gare[3] = gare4;
 
-	liste_gares[0].setListeGares(Gares);
-	liste_gares[1].setListeGares(Gares);
-	liste_gares[2].setListeGares(Gares);
-	liste_gares[3].setListeGares(Gares);
+	ensemble_gare EnsembleGares = ensemble_gare();
+
+	couleur Gare = couleur("gare",4,liste_gare);
+
 
 	this->Gares = Gares;
 
