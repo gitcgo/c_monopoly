@@ -318,7 +318,7 @@ couleur* initialisation_propriete () {
 	compagnie compagnie1 = compagnie("Compagnie de Distribution Electrique");
 	compagnie compagnie2 = compagnie("Compagnie de Distribution des Eaux");
 
-	liste_compagnie[0] = comapgnie1;
+	liste_compagnie[0] = compagnie1;
 	liste_compagnie[1] = compagnie2;
 
 	couleur Gare = couleur("gare",4,liste_gare);
