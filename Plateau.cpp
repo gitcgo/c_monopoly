@@ -24,7 +24,9 @@ void Plateau::creerCases() {
 	communaute communaute1 = communaute("communaute1");
 	communaute communaute2 = communaute("communaute2");
 	communaute communaute3 = communaute("communaute3");
+
 	Carte* pile_carte_communaute = this->initialisation_cartes_communaute();
+
 	communaute1.setPile_carte_commmuanute(pile_carte_communaute);
 	communaute2.setPile_carte_commmuanute(pile_carte_communaute);
 	communaute3.setPile_carte_commmuanute(pile_carte_communaute);
@@ -33,7 +35,9 @@ void Plateau::creerCases() {
 	chance chance1 = chance("chance1");
 	chance chance2 = chance("chance2");
 	chance chance3 = chance("chance3");
+
 	Carte* pile_carte_chance = this->initialisation_cartes_chance();
+
 	chance1.setPile_carte_chance(pile_carte_chance);
 	chance2.setPile_carte_chance(pile_carte_chance);
 	chance3.setPile_carte_chance(pile_carte_chance);
@@ -59,24 +63,6 @@ void Plateau::creerCases() {
 
 	// initialisation de toutes les proprietes et gare
 
-	gare* liste_gare = new gare[4];
-
-	gare gare1 = gare("Gare Montparnasse");
-	gare gare2 = gare("Gare de Lyon");
-	gare gare3 = gare("Gare du Nord");
-	gare gare4 = gare("Gare Saint-Lazare");
-
-	liste_gare[0] = gare1;
-	liste_gare[1] = gare2;
-	liste_gare[2] = gare3;
-	liste_gare[3] = gare4;
-
-	ensemble_gare EnsembleGares = ensemble_gare();
-
-	couleur Gare = couleur("gare",4,liste_gare);
-
-
-	this->Gares = Gares;
 
 	couleur* liste_propriete = initialisation_propriete(); // merci corentin
 
@@ -107,7 +93,7 @@ Carte* Plateau::initialisation_cartes_chance(){
 	pile_carte_chance[9] = Carte("Reculez de trois cases",0,0,3); // REcule de 3 cases
 	pile_carte_chance[10] = Carte("Payer les réparations de vos maisons : 25 € / Maison , 100 € /Hôtel",0,0,0,NULL); // Plus compliqué que prévu il faudr afaire un triuc exprès
 	pile_carte_chance[11] = Carte("Votre prêt rapporte 150 €",150,0,0,NULL);
-	pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Enocre les enbrouilles
+	pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Encore les enbrouilles
 	pile_carte_chance[13] = Carte("Rendez-vous à la Rue de la Paix",0,0,0,this->getCase(40)); // NULL à remplacr par #40
 	pile_carte_chance[14] = Carte("La banque vous verse 50 €",50,0,0,NULL);
 
