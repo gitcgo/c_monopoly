@@ -35,6 +35,9 @@ int main() {
 	cout << "Veuiller entrer le nombre de joueur : " << endl ;
 	cin >> nmbrJoueur ;
 	joueur* listeJoueur = new joueur[nmbrJoueur];
+
+	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
+
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
 		string nomJoueur;
 		cout << "Comment s'appelle le Joueur " << (string) i << "?" << endl;
@@ -51,8 +54,11 @@ int main() {
 
 		listeJoueur[i] = Joueur;
 		Pion.setJoueur(&Joueur);
-
+		Pion.setPosition(truc)
 	}
+
+
+
 
 	return 0;
 }
