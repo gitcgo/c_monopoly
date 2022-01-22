@@ -60,13 +60,6 @@ void Plateau::creerCases() {
 	depart Depart = depart("depart");
 	prison Prison = prison("prison");
 
-
-	// initialisation de toutes les proprietes et gare
-
-
-	couleur* liste_propriete = initialisation_propriete(); // merci corentin
-
-	this->liste_propriete = liste_propriete;
 	
 	//liaison de toutes les cases (liste chainée)
 	
@@ -114,7 +107,7 @@ void Plateau::creerCases() {
 	luxe.Setsuivante(&ter22);
 	ter22.Setsuivante(&depart);
 
-	this->liste_case = &depart;
+	liste_case = &depart;
 }
 
 //void Plateau::lierCases() {}. On vire cette méthode pour l'instant
