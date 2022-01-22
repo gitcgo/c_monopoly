@@ -8,6 +8,7 @@
 #include "joueur.h"
 
 joueur::joueur(string nom,pion Pion ) {
+    this->en_prison = false;
 	this->solde = 1500;
 	this->Pion = Pion;
 	this->Nom = nom;

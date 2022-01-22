@@ -20,6 +20,7 @@ class joueur {
 		pion Pion ; //Pointeur vers le pion : le joueur doit savoir où se trouve son pion
 		int solde ; //La THUNE possédée par le joueur
 		int carte_liberation ; // nombre de carte libération de prison que le joeueur possède
+        bool en_prison ;
 		
 	public:
 		joueur(string nom,pion Pion ); //Constructeur du joueur
