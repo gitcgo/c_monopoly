@@ -11,12 +11,12 @@
 
 class gobelet {
 private :
-	de de1;
-	de de2;
+	static de de1;
+	static de de2;
 public:
 	gobelet();
 	virtual ~gobelet();
-	int getValeur(){return (this->de1.getValeur() + this->de2.getValeur());};
+	static int getValeur(){return (de1.getValeur() + de2.getValeur());};
 	void lancer();
 	bool Double();
 };
