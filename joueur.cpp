@@ -31,7 +31,6 @@ void joueur::crediter(int credit){ //Un joueur reçoit une certaine somm
 	this->solde += credit;
 }
 
-
 void joueur::debiter(int debit){ //Un joueur se fait débiter une certaine somme
     this->solde -= debit;
     if (solde<=0) {
@@ -39,6 +38,9 @@ void joueur::debiter(int debit){ //Un joueur se fait débiter une certaine somme
     }
 }
 
+bool joueur::isOut(){
+    return (solde<=0);
+}
 
 void joueur::jouer(){
     if (solde > 0) {
