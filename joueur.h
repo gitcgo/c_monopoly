@@ -24,6 +24,7 @@ class joueur {
 		int carte_liberation ; // nombre de carte libération de prison que le joeueur possède
 		
 	public:
+		joueur();
 		joueur(string nom,pion Pion ); //Constructeur du joueur
 		virtual ~joueur(); //Destructeur mais qu'on utilisera sûrement pas : le joueur reste là jusqu'à la fin du jeu
 	

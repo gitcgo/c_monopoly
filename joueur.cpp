@@ -7,6 +7,15 @@
 
 #include "joueur.h"
 
+joueur::joueur(){
+	this->solde = 0;
+	this->Pion = NULL;
+	this->Nom = "undefinied";
+	this->carte_liberation =0;
+	this->prison = false ;
+	this->temps_prison = 0 ;
+}
+
 joueur::joueur(string nom,pion Pion ) {
 	this->solde = 1500;
 	this->Pion = Pion;
