@@ -67,6 +67,8 @@ void Plateau::creerCases() {
 	couleur* liste_propriete = initialisation_propriete(); // merci corentin
 
 	this->liste_propriete = liste_propriete;
+
+
 }
 
 void Plateau::lierCases() {
@@ -76,6 +78,12 @@ void Plateau::lierCases() {
 Case* Plateau::getCase(int IDCase ){
 	return &(this->liste_case[IDCase]);
 }
+
+
+
+
+
+
 
 Carte* Plateau::initialisation_cartes_chance(){
 	Carte* pile_carte_chance = new Carte[15];
@@ -115,12 +123,11 @@ Carte* Plateau::initialisation_cartes_communaute(){
 	pile_carte_communaute[7] = Carte("Retournez à Boulevard de Belleville",0,0,0,this->getCase(1));
 	pile_carte_communaute[8] = Carte("Aller en prison",0,0,0,this->getCase(10));
 	pile_carte_communaute[9] = Carte("Placez vous sur la Case Départ",0,0,0,this->getCase(0));
-	pile_carte_communaute[10] = Carte("C'est votre anniversaire. Chaque joueur vous donne 20 euros.");
-	pile_carte_communaute[11] = Carte("Recevez 100 euros",100);
-	pile_carte_communaute[12] = Carte("Payez une amende de 10 euros ou tirez une carte chance");
-	pile_carte_communaute[13] = Carte("Erreur de la banque en votre faveur, recevez 200 euros",200);
-	pile_carte_communaute[14] = Carte("Vente de votre stock, recevez 50 euros",50);
-	pile_carte_communaute[15] = Carte("Payez les frais d'hôpital : 100 euros",0,100);
+	pile_carte_communaute[10] = Carte("Recevez 100 euros",100);
+	pile_carte_communaute[11] = Carte("Payez une amende de 10 euros ou tirez une carte chance");
+	pile_carte_communaute[12] = Carte("Erreur de la banque en votre faveur, recevez 200 euros",200);
+	pile_carte_communaute[13] = Carte("Vente de votre stock, recevez 50 euros",50);
+	pile_carte_communaute[14] = Carte("Payez les frais d'hôpital : 100 euros",0,100);
 
 	return pile_carte_communaute;
 }

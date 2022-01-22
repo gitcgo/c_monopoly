@@ -9,8 +9,6 @@
 #define PLATEAU_H_
 
 #include "Case.h"
-#include "initialisation_chance.h"
-#include "initialisation_communaute.h"
 #include "initialisation_propriete.cpp"
 #include "depart.h"
 #include "prison.h"

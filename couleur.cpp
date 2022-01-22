@@ -37,3 +37,15 @@ bool couleur::check_monopole(joueur* ptJoueur){
 	}
 	return true;
 }
+
+int couleur::checkGare(joueur* ptJoueur){
+	int compteur = 0 ;
+	for (int i = 0; i < this->longueur; i ++) {
+		propriete propri = this->liste_propriete[i];
+		if (propri.GetProprietaire() == ptJoueur) {
+			compteur += 1 ;
+		}}
+	return compteur ;
+
+
+}

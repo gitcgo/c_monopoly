@@ -25,7 +25,7 @@ public:
 	int getLongueur(){return this->longueur;};
 	bool check_monopole(joueur* ptJoueur);
 	virtual ~couleur();
-	int checkgare();
+	int checkGare(joueur* ptJoueur);
 };
 
 #endif /* COULEUR_H_ */
