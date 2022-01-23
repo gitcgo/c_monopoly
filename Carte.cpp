@@ -15,6 +15,13 @@ Carte::Carte(std::string text,int gain, int perte,int deplacemenent,Case* ptTele
 
 }
 
+Carte::Carte(){
+	this->gain=0;
+	this->perte=0;
+	this->ptTeleportation=NULL;
+	this->text="";
+}
+
 Carte::~Carte() {
 	// TODO Auto-generated destructor stub
 }

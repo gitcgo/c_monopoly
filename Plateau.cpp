@@ -47,7 +47,7 @@ void Plateau::creerCases() {
 		listeLoyer1[4]= 160 ;
 		listeLoyer1[5]= 250 ;
 
-		 Terrain ter1 = Terrain("Boulevard de Belleville", listeLoyer1,60);
+	Terrain ter1 = Terrain("Boulevard de Belleville", listeLoyer1,60);
 
 		int* listeLoyer2 = new int[6];
 		listeLoyer2[0]= 4 ;
@@ -57,7 +57,7 @@ void Plateau::creerCases() {
 		listeLoyer2[4]= 320 ;
 		listeLoyer2[5]= 450 ;
 
-		 Terrain ter2 = Terrain("Rue Lecourbe", listeLoyer2,60);
+	Terrain ter2 = Terrain("Rue Lecourbe", listeLoyer2,60);
 
 		int* listeLoyer3 = new int[6];
 		listeLoyer3[0]= 6 ;
@@ -67,7 +67,7 @@ void Plateau::creerCases() {
 		listeLoyer3[4]= 400 ;
 		listeLoyer3[5]= 550 ;
 
-		 Terrain ter3 = Terrain("Rue de Vaugirard", listeLoyer3,100);
+	Terrain ter3 = Terrain("Rue de Vaugirard", listeLoyer3,100);
 
 
 		int* listeLoyer4 = new int[6];
@@ -78,7 +78,7 @@ void Plateau::creerCases() {
 		listeLoyer4[4]= 400 ;
 		listeLoyer4[5]= 550 ;
 
-		 Terrain ter4 = Terrain("Rue de Courcelles", listeLoyer4,100);
+	Terrain ter4 = Terrain("Rue de Courcelles", listeLoyer4,100);
 
 
 		int* listeLoyer5 = new int[6];

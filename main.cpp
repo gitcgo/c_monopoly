@@ -28,7 +28,7 @@ gobelet Gobelet = gobelet(); // définir une varaibel globale
 
 int main() {
 
-	std::cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corenton" << std::endl ;
+	std::cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corentin" << std::endl ;
 	int nmbrJoueur ;
 	std::cout << "Veuiller entrer le nombre de joueur : " << std::endl ;
 	std::cin >> nmbrJoueur ;
@@ -42,20 +42,29 @@ int main() {
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
 
 		std::string nomJoueur;
-		std::cout << "Comment s'appelle le Joueur " << i << "?" << std::endl;
+		std::cout << "Comment s'appelle le Joueur " << i + 1 << "?" << std::endl;
 		std::cin >> nomJoueur ;
 		std::string nomPion ;
-		std::cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " <<  nmbrJoueur << std::endl ;
+		std::cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " <<  i << std::endl ;
 		std::cin >> nomPion ;
 
 		pion* ptPion = new pion(nomPion,plateau.getListeCase());
 		pion Pion = *ptPion ;
 
 		joueur* ptJoueur = new joueur(nomJoueur,ptPion);
-
-		listeJoueur[i] = *ptJoueur;
+		joueur Joueur = *ptJoueur;
+		listeJoueur[i] = Joueur;
 		Pion.setJoueur(ptJoueur);
 		Pion.setPosition(plateau.getListeCase());
+	}
+
+	std::cout<< "La phase de création des joueurs est finie ! " << std::endl;
+
+	for (int i = 0 ;  i < nmbrJoueur ; i ++ ) {
+		pion ptPionaffiche = *listeJoueur[i].getptPion();
+		std::string Pionaffiche = ptPionaffiche.getNom();
+		std::string casedépart = ptPionaffiche.getPosition()->getNom();
+		std::cout << "La position actuelle du pion du joueur "<< listeJoueur[i].getNom() <<" est la case : " << casedépart << std::endl;
 	}
 
 	jeu Jeu = jeu();
@@ -73,12 +82,5 @@ int main() {
 			Joueur.jouer( plateau , Gobelet);
 		}
 	}
-
-
-
-
-
-
-
 	return 0;
 }
