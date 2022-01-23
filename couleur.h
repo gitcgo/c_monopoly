@@ -9,19 +9,19 @@
 #define COULEUR_H_
 
 #include "propriete.h"
-#include "joueur.h"
-#include "gare.h"
+
+class propriete; // declaration an ticipée
 
 class couleur {
 private:
 	propriete* liste_propriete ;
-	string nom;
+	std::string nom;
 	int longueur ;
 public:
 	couleur();
-	couleur(string nom,int longueur, propriete* liste_propriete= NULL);
+	couleur(std::string nom,int longueur, propriete* liste_propriete);
 	propriete* getListePropriete(){return this->liste_propriete;};
-	string getNom(){return this->nom;};
+	std::string getNom(){return this->nom;};
 	int getLongueur(){return this->longueur;};
 	bool check_monopole(joueur* ptJoueur);
 	virtual ~couleur();

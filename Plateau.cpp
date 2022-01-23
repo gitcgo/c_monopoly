@@ -6,7 +6,6 @@
  */
 
 #include "Plateau.h"
-#include "Terrain.h"
 
 Plateau::Plateau() {
 	// TODO Auto-generated constructor stub
@@ -19,28 +18,7 @@ Plateau::~Plateau() {
 }
 
 void Plateau::creerCases() {
-	// Initialisation des 3 cases communaute
 
-	communaute communaute1 = communaute("communaute1");
-	communaute communaute2 = communaute("communaute2");
-	communaute communaute3 = communaute("communaute3");
-
-	Carte* pile_carte_communaute = this->initialisation_cartes_communaute();
-
-	communaute1.setPile_carte_commmuanute(pile_carte_communaute);
-	communaute2.setPile_carte_commmuanute(pile_carte_communaute);
-	communaute3.setPile_carte_commmuanute(pile_carte_communaute);
-
-	// initialisation des 3 cases chance
-	chance chance1 = chance("chance1");
-	chance chance2 = chance("chance2");
-	chance chance3 = chance("chance3");
-
-	Carte* pile_carte_chance = this->initialisation_cartes_chance();
-
-	chance1.setPile_carte_chance(pile_carte_chance);
-	chance2.setPile_carte_chance(pile_carte_chance);
-	chance3.setPile_carte_chance(pile_carte_chance);
 
 	// initialisation des cases taxes
 
@@ -60,14 +38,7 @@ void Plateau::creerCases() {
 	depart Depart = depart("depart");
 	prison Prison = prison("prison");
 
-
-	// initialisation de toutes les proprietes et gare
-
-
-	couleur* liste_couleur = new couleur[9];
-
-		// initialisation propriete d'un couleur
-		int* listeLoyer1 = new int[6];
+	int* listeLoyer1 = new int[6];
 
 		listeLoyer1[0]= 2 ;
 		listeLoyer1[1]= 10 ;
@@ -76,7 +47,7 @@ void Plateau::creerCases() {
 		listeLoyer1[4]= 160 ;
 		listeLoyer1[5]= 250 ;
 
-		Terrain ter1 = Terrain("Boulevard de Belleville", listeLoyer1,60);
+		 Terrain ter1 = Terrain("Boulevard de Belleville", listeLoyer1,60);
 
 		int* listeLoyer2 = new int[6];
 		listeLoyer2[0]= 4 ;
@@ -86,7 +57,7 @@ void Plateau::creerCases() {
 		listeLoyer2[4]= 320 ;
 		listeLoyer2[5]= 450 ;
 
-		Terrain ter2 = Terrain("Rue Lecourbe", listeLoyer2,60);
+		 Terrain ter2 = Terrain("Rue Lecourbe", listeLoyer2,60);
 
 		int* listeLoyer3 = new int[6];
 		listeLoyer3[0]= 6 ;
@@ -96,7 +67,7 @@ void Plateau::creerCases() {
 		listeLoyer3[4]= 400 ;
 		listeLoyer3[5]= 550 ;
 
-		Terrain ter3 = Terrain("Rue de Vaugirard", listeLoyer3,100);
+		 Terrain ter3 = Terrain("Rue de Vaugirard", listeLoyer3,100);
 
 
 		int* listeLoyer4 = new int[6];
@@ -107,7 +78,7 @@ void Plateau::creerCases() {
 		listeLoyer4[4]= 400 ;
 		listeLoyer4[5]= 550 ;
 
-		Terrain ter4 = Terrain("Rue de Courcelles", listeLoyer4,100);
+		 Terrain ter4 = Terrain("Rue de Courcelles", listeLoyer4,100);
 
 
 		int* listeLoyer5 = new int[6];
@@ -118,7 +89,7 @@ void Plateau::creerCases() {
 		listeLoyer5[4]= 450 ;
 		listeLoyer5[5]= 600 ;
 
-		Terrain ter5 = Terrain("Avenue de la République", listeLoyer5,120);
+		 Terrain ter5 = Terrain("Avenue de la République", listeLoyer5,120);
 
 
 		int* listeLoyer6 = new int[6];
@@ -129,7 +100,7 @@ void Plateau::creerCases() {
 		listeLoyer6[4]= 625 ;
 		listeLoyer6[5]= 750 ;
 
-		Terrain ter6= Terrain("Boulevard de la Villette", listeLoyer6,140);
+		 Terrain ter6= Terrain("Boulevard de la Villette", listeLoyer6,140);
 
 
 		int* listeLoyer7 = new int[6];
@@ -140,7 +111,7 @@ void Plateau::creerCases() {
 		listeLoyer7[4]= 625 ;
 		listeLoyer7[5]= 750 ;
 
-		Terrain ter7 = Terrain("Avenue de Neuilly", listeLoyer7,140);
+		 Terrain ter7 = Terrain("Avenue de Neuilly", listeLoyer7,140);
 
 
 		int* listeLoyer8 = new int[6];
@@ -151,7 +122,7 @@ void Plateau::creerCases() {
 		listeLoyer8[4]= 700 ;
 		listeLoyer8[5]= 900 ;
 
-		Terrain ter8 = Terrain("Rue de Paradis", listeLoyer8,160);
+		 Terrain ter8 = Terrain("Rue de Paradis", listeLoyer8,160);
 
 
 		int* listeLoyer9 = new int[6];
@@ -162,7 +133,7 @@ void Plateau::creerCases() {
 		listeLoyer9[4]= 750 ;
 		listeLoyer9[5]= 950 ;
 
-		Terrain ter9 = Terrain("Avenue Mozart", listeLoyer9,180);
+		 Terrain ter9 = Terrain("Avenue Mozart", listeLoyer9,180);
 
 
 		int* listeLoyer10 = new int[6];
@@ -173,7 +144,7 @@ void Plateau::creerCases() {
 		listeLoyer10[4]= 750 ;
 		listeLoyer10[5]= 950 ;
 
-		Terrain ter10= Terrain("Boulevard Saint-Michel", listeLoyer10,180);
+		 Terrain ter10= Terrain("Boulevard Saint-Michel", listeLoyer10,180);
 
 		int* listeLoyer11 = new int[6];
 		listeLoyer11[0]= 16;
@@ -183,7 +154,7 @@ void Plateau::creerCases() {
 		listeLoyer11[4]= 800 ;
 		listeLoyer11[5]= 1000 ;
 
-		Terrain ter11 = Terrain("Place Pigalle", listeLoyer11,200);
+		 Terrain ter11 = Terrain("Place Pigalle", listeLoyer11,200);
 
 
 		int* listeLoyer12 = new int[6];
@@ -194,7 +165,7 @@ void Plateau::creerCases() {
 		listeLoyer12[4]= 875 ;
 		listeLoyer12[5]= 1050 ;
 
-		  Terrain ter12 = Terrain("Avenue Matignon", listeLoyer12,220);
+		 Terrain ter12 = Terrain("Avenue Matignon", listeLoyer12,220);
 
 
 		int* listeLoyer13 = new int[6];
@@ -205,7 +176,7 @@ void Plateau::creerCases() {
 		listeLoyer13[4]= 875 ;
 		listeLoyer13[5]= 1050 ;
 
-		  Terrain ter13 = Terrain("Boulevard Malesherbes", listeLoyer13,220);
+		 Terrain ter13 = Terrain("Boulevard Malesherbes", listeLoyer13,220);
 
 
 		int* listeLoyer14 = new int[6];
@@ -216,7 +187,7 @@ void Plateau::creerCases() {
 		listeLoyer14[4]= 925 ;
 		listeLoyer14[5]= 1100 ;
 
-		  Terrain ter14 = Terrain("Avenue Henri-Martin", listeLoyer14,240);
+		 Terrain ter14 = Terrain("Avenue Henri-Martin", listeLoyer14,240);
 
 
 		int* listeLoyer15 = new int[6];
@@ -227,7 +198,7 @@ void Plateau::creerCases() {
 		listeLoyer15[4]= 975 ;
 		listeLoyer15[5]= 1150 ;
 
-		  Terrain ter15 = Terrain("Faubourg Saint-Honoré", listeLoyer15,260);
+		 Terrain ter15 = Terrain("Faubourg Saint-Honoré", listeLoyer15,260);
 
 
 		int* listeLoyer16 = new int[6];
@@ -238,7 +209,7 @@ void Plateau::creerCases() {
 		listeLoyer16[4]= 975 ;
 		listeLoyer16[5]= 1150 ;
 
-		  Terrain ter16 = Terrain("Place de la Bourse", listeLoyer16,260);
+		 Terrain ter16 = Terrain("Place de la Bourse", listeLoyer16,260);
 
 
 		int* listeLoyer17 = new int[6];
@@ -249,7 +220,7 @@ void Plateau::creerCases() {
 		listeLoyer17[4]= 1025 ;
 		listeLoyer17[5]= 1200;
 
-		  Terrain ter17 = Terrain("Rue La Fayette", listeLoyer17,280);
+		 Terrain ter17 = Terrain("Rue La Fayette", listeLoyer17,280);
 
 
 		int* listeLoyer18 = new int[6];
@@ -260,7 +231,7 @@ void Plateau::creerCases() {
 		listeLoyer18[4]= 1100 ;
 		listeLoyer18[5]= 1275;
 
-		  Terrain ter18 = Terrain("Avenue de Breteuil", listeLoyer18,300);
+		 Terrain ter18 = Terrain("Avenue de Breteuil", listeLoyer18,300);
 
 
 		int* listeLoyer19 = new int[6];
@@ -271,7 +242,7 @@ void Plateau::creerCases() {
 		listeLoyer19[4]= 1100 ;
 		listeLoyer19[5]= 1275;
 
-		  Terrain ter19= Terrain("Avenue Foch", listeLoyer19,300);
+		 Terrain ter19= Terrain("Avenue Foch", listeLoyer19,300);
 
 
 		int* listeLoyer20 = new int[6];
@@ -282,7 +253,7 @@ void Plateau::creerCases() {
 		listeLoyer20[4]= 1200;
 		listeLoyer20[5]= 1400;
 
-		Terrain ter20 = Terrain("Boulevard des Capucines", listeLoyer20,320);
+		 Terrain ter20 = Terrain("Boulevard des Capucines", listeLoyer20,320);
 
 
 		int* listeLoyer21 = new int[6];
@@ -293,7 +264,7 @@ void Plateau::creerCases() {
 		listeLoyer21[4]= 1300;
 		listeLoyer21[5]= 1500;
 
-		  Terrain ter21 = Terrain("Avenue des Champs-Elysées", listeLoyer21,350);
+		 Terrain ter21 = Terrain("Avenue des Champs-Elysées", listeLoyer21,350);
 
 
 		int* listeLoyer22 = new int[6];
@@ -304,7 +275,7 @@ void Plateau::creerCases() {
 		listeLoyer22[4]= 1700;
 		listeLoyer22[5]= 2000;
 
-		  Terrain ter22 = Terrain("Rue de la Paix", listeLoyer22,400);
+		 Terrain ter22 = Terrain("Rue de la Paix", listeLoyer22,400);
 
 		Terrain* liste_terrain_bru = new Terrain[2];
 		liste_terrain_bru[0]= ter1 ;
@@ -359,6 +330,11 @@ void Plateau::creerCases() {
 
 		couleur Gare = couleur("gare",4,liste_gare);
 
+		gare1.setptCouleur(&Gare);
+		gare2.setptCouleur(&Gare);
+		gare3.setptCouleur(&Gare);
+		gare4.setptCouleur(&Gare);
+
 		compagnie* liste_compagnie = new compagnie[2];
 
 		compagnie compagnie1 = compagnie("Compagnie de Distribution Electrique");
@@ -366,7 +342,6 @@ void Plateau::creerCases() {
 
 		liste_compagnie[0] = compagnie1;
 		liste_compagnie[1] = compagnie2;
-
 
 
 		// On peut maintenant initialiser les couleurs comme objets contenant la liste de terrains de leur couleur
@@ -379,6 +354,9 @@ void Plateau::creerCases() {
 		couleur Vert= couleur("vert",2,liste_terrain_ver);
 		couleur Bleu = couleur("bleu",2,liste_terrain_bleu);
 
+
+		couleur* liste_couleur = new couleur[9];
+
 		//On peut maintenant créer la liste des couleurs :
 		liste_couleur[0] = Brun;
 		liste_couleur[1] = Bleuciel;
@@ -389,6 +367,70 @@ void Plateau::creerCases() {
 		liste_couleur[6] = Vert;
 		liste_couleur[7] = Bleu;
 		liste_couleur[8] = Gare;
+
+
+
+		// Initialisation des 3 cases communaute
+
+			communaute communaute1 = communaute("communaute1");
+			communaute communaute2 = communaute("communaute2");
+			communaute communaute3 = communaute("communaute3");
+
+			Carte* pile_carte_communaute = new Carte[16];
+					// Je crée chaque carte avec text gain perte deplacement telportation
+				pile_carte_communaute[0] = Carte("Payez le police d'assurance : 50 euros",0,50);
+				pile_carte_communaute[1] = Carte("Vous héritez de 100 euros",100);
+				pile_carte_communaute[2] = Carte("Conservez cette carte pour pouvoir être libéré de prison");
+				pile_carte_communaute[3] = Carte("Payez la note du médecin : 50 euros",0,50);
+				pile_carte_communaute[4] = Carte("Vous gagnez le 2nd prix de beauté, recevez 100 euros",100);
+				pile_carte_communaute[5] = Carte("Les contributions vous remboursent 20 euros",20);
+				pile_carte_communaute[6] = Carte("Recevez vos intérêts : 25 euros",25);
+				pile_carte_communaute[7] = Carte("Retournez à Boulevard de Belleville",0,0,0,&ter1);
+				pile_carte_communaute[8] = Carte("Aller en prison",0,0,0,&Prison);
+				pile_carte_communaute[9] = Carte("Placez vous sur la Case Départ",0,0,0,&Depart);
+				pile_carte_communaute[10] = Carte("C'est votre anniversaire. Chaque joueur vous donne 20 euros.");
+				pile_carte_communaute[11] = Carte("Recevez 100 euros",100);
+				pile_carte_communaute[12] = Carte("Payez une amende de 10 euros ou tirez une carte chance");
+				pile_carte_communaute[13] = Carte("Erreur de la banque en votre faveur, recevez 200 euros",200);
+				pile_carte_communaute[14] = Carte("Vente de votre stock, recevez 50 euros",50);
+				pile_carte_communaute[15] = Carte("Payez les frais d'hôpital : 100 euros",0,100);
+
+
+			communaute1.setPile_carte_commmuanute(pile_carte_communaute);
+			communaute2.setPile_carte_commmuanute(pile_carte_communaute);
+			communaute3.setPile_carte_commmuanute(pile_carte_communaute);
+
+			// initialisation des 3 cases chance
+			chance chance1 = chance("chance1");
+			chance chance2 = chance("chance2");
+			chance chance3 = chance("chance3");
+
+
+			Carte* pile_carte_chance = new Carte[15];
+
+				// Je crée chaque carte avec text gain perte deplacement telportation
+				pile_carte_chance[0] = Carte("Allez directement sur la Case Départ",0,0,0,&Depart);
+				pile_carte_chance[1] = Carte("Interpol vous arrête, rendez-vous en prison sans passer par la case départ",0,0,0); // A remplacer par la case prison
+				pile_carte_chance[2] = Carte("Rendez-vous au Boulevard de la Villette",0,0,0,&ter6); // NULL à remplacer par case 11 du plateau
+				pile_carte_chance[3] = Carte("Vous recevez un e amende pour conduite en état d'ivresse, payer 20 €",0,20);
+				pile_carte_chance[4] = Carte("Vous gagnez un concours de mots croisés, recevez 100 €",100);
+				pile_carte_chance[5] = Carte("Rendez-vous à la rue Henri Martin ",0,0,0,&ter14);// dernier null à remplacer par la case 24 du plateau
+				pile_carte_chance[6] = Carte("Rendez-vous à la gare de Lyon",0,0,0,&gare2); // replace null => 15
+				pile_carte_chance[7] = Carte("Vous avez été contrôlé avec un excès de vitesse de 80 km/h, veuillez payer 150 €",0,150,0);
+				pile_carte_chance[8] = Carte("Payer les frais de scolarité de votre enfant, veuillez payer 150 €",0,150,0);
+				pile_carte_chance[9] = Carte("Reculez de trois cases",0,0,3); // REcule de 3 cases
+				pile_carte_chance[10] = Carte("Payer les réparations de vos maisons : 25 € / Maison , 100 € /Hôtel",0,0,0,NULL); // Plus compliqué que prévu il faudr afaire un triuc exprès
+				pile_carte_chance[11] = Carte("Votre prêt rapporte 150 €",150,0,0,NULL);
+				pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Encore les enbrouilles
+				pile_carte_chance[13] = Carte("Rendez-vous à la Rue de la Paix",0,0,0,&ter22); // NULL à remplacr par #40
+				pile_carte_chance[14] = Carte("La banque vous verse 50 €",50,0,0,NULL);
+
+			chance1.setPile_carte_chance(pile_carte_chance);
+			chance2.setPile_carte_chance(pile_carte_chance);
+			chance3.setPile_carte_chance(pile_carte_chance);
+
+
+
 
 		// Et on peut maintenant affecter une couleur à chaque terrain :
 		ter1.setCouleur(&(liste_couleur[0]));
@@ -421,12 +463,7 @@ void Plateau::creerCases() {
 		ter21.setCouleur(&(liste_couleur[7]));
 		ter22.setCouleur(&(liste_couleur[7]));
 
-	couleur* liste_propriete ; // merci corentin
-
-	this->liste_propriete = liste_propriete;
 	
-
-
 	//liaison de toutes les cases (liste chainée)
 	
 	Depart.setSuivante(&ter1);
@@ -473,7 +510,7 @@ void Plateau::creerCases() {
 	luxe.setSuivante(&ter22);
 	ter22.setSuivante(&Depart);
 
-	this->liste_case = &Depart;
+	liste_case = &Depart;
 }
 
 //void Plateau::lierCases() {}. On vire cette méthode pour l'instant
@@ -482,50 +519,3 @@ Case* Plateau::getCase(int IDCase ){
 	return &(this->liste_case[IDCase]);
 }
 
-Carte* Plateau::initialisation_cartes_chance(){
-	Carte* pile_carte_chance = new Carte[15];
-
-	// Je crée chaque carte avec text gain perte deplacement telportation
-	pile_carte_chance[0] = Carte("Allez directement sur la Case Départ",0,0,0,this->getCase(0));
-	pile_carte_chance[1] = Carte("Interpol vous arrête, rendez-vous en prison sans passer par la case départ",0,0,0); // A remplacer par la case prison
-	pile_carte_chance[2] = Carte("Rendez-vous au Boulevard de la Villette",0,0,0,this->getCase(11)); // NULL à remplacer par case 11 du plateau
-	pile_carte_chance[3] = Carte("Vous recevez un e amende pour conduite en état d'ivresse, payer 20 €",0,20);
-	pile_carte_chance[4] = Carte("Vous gagnez un concours de mots croisés, recevez 100 €",100);
-	pile_carte_chance[5] = Carte("Rendez-vous à la rue Henri Martin ",0,0,0,this->getCase(24));// dernier null à remplacer par la case 24 du plateau
-	pile_carte_chance[6] = Carte("Rendez-vous à la gare de Lyon",0,0,0,this->getCase(15)); // replace null => 15
-	pile_carte_chance[7] = Carte("Vous avez été contrôlé avec un excès de vitesse de 80 km/h, veuillez payer 150 €",0,150,0);
-	pile_carte_chance[8] = Carte("Payer les frais de scolarité de votre enfant, veuillez payer 150 €",0,150,0);
-	pile_carte_chance[9] = Carte("Reculez de trois cases",0,0,3); // REcule de 3 cases
-	pile_carte_chance[10] = Carte("Payer les réparations de vos maisons : 25 € / Maison , 100 € /Hôtel",0,0,0,NULL); // Plus compliqué que prévu il faudr afaire un triuc exprès
-	pile_carte_chance[11] = Carte("Votre prêt rapporte 150 €",150,0,0,NULL);
-	pile_carte_chance[12] = Carte("Conservez cette carte pour pouvoir être libéré de prison",0,0,0,NULL); // Encore les enbrouilles
-	pile_carte_chance[13] = Carte("Rendez-vous à la Rue de la Paix",0,0,0,this->getCase(40)); // NULL à remplacr par #40
-	pile_carte_chance[14] = Carte("La banque vous verse 50 €",50,0,0,NULL);
-
-	return pile_carte_chance ;
-
-}
-
-Carte* Plateau::initialisation_cartes_communaute(){
-	Carte* pile_carte_communaute = new Carte[16];
-
-		// Je crée chaque carte avec text gain perte deplacement telportation
-	pile_carte_communaute[0] = Carte("Payez le police d'assurance : 50 euros",0,50);
-	pile_carte_communaute[1] = Carte("Vous héritez de 100 euros",100);
-	pile_carte_communaute[2] = Carte("Conservez cette carte pour pouvoir être libéré de prison");
-	pile_carte_communaute[3] = Carte("Payez la note du médecin : 50 euros",0,50);
-	pile_carte_communaute[4] = Carte("Vous gagnez le 2nd prix de beauté, recevez 100 euros",100);
-	pile_carte_communaute[5] = Carte("Les contributions vous remboursent 20 euros",20);
-	pile_carte_communaute[6] = Carte("Recevez vos intérêts : 25 euros",25);
-	pile_carte_communaute[7] = Carte("Retournez à Boulevard de Belleville",0,0,0,this->getCase(1));
-	pile_carte_communaute[8] = Carte("Aller en prison",0,0,0,this->getCase(10));
-	pile_carte_communaute[9] = Carte("Placez vous sur la Case Départ",0,0,0,this->getCase(0));
-	pile_carte_communaute[10] = Carte("C'est votre anniversaire. Chaque joueur vous donne 20 euros.");
-	pile_carte_communaute[11] = Carte("Recevez 100 euros",100);
-	pile_carte_communaute[12] = Carte("Payez une amende de 10 euros ou tirez une carte chance");
-	pile_carte_communaute[13] = Carte("Erreur de la banque en votre faveur, recevez 200 euros",200);
-	pile_carte_communaute[14] = Carte("Vente de votre stock, recevez 50 euros",50);
-	pile_carte_communaute[15] = Carte("Payez les frais d'hôpital : 100 euros",0,100);
-
-	return pile_carte_communaute;
-}

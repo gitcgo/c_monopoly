@@ -24,7 +24,8 @@ void communaute::arreterSur(joueur* ptJoueur){
 		Joueur.crediter(CarteTiree.getGain());
 		Joueur.debiter(CarteTiree.getPerte());
 		if ( CarteTiree.getDeplacement() > 0 ) {
-			pion Pion = Joueur.getPion() ;
+			pion* ptPion = Joueur.getptPion() ;
+			pion Pion = *ptPion;
 			Pion.deplacer(CarteTiree.getDeplacement()*(-1));
 		}
 

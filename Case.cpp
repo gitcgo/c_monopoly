@@ -8,12 +8,12 @@
 #include "Case.h"
 #include "joueur.h"
 
-Case::Case(string nom, Case* suivante) {
+Case::Case(std::string nom, Case* suivante) {
 	this->nom  = nom ;
 	this->suivante = suivante;
 }
 
-Case::Case(string nom) {
+Case::Case(std::string nom) {
     this->nom  = nom ;
     this->suivante= NULL;
 }
@@ -23,6 +23,6 @@ Case::~Case() {
 }
 
 void Case::arreterSur(joueur *joueur) {
-    cout << "arreterSur non défini" << endl;
+	std::cout << "arreterSur non défini" << std::endl;
 }
 

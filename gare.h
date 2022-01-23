@@ -10,13 +10,15 @@
 
 #include "propriete.h"
 
-class gare: public propriete {
-private  :
+
+class gare : public propriete {
+private :
+	couleur* ptCouleur ;
 public:
 	gare();
-	gare(string nom, int prixAchat=200, Case* suivante=NULL, joueur* ptProprietaire=NULL,int* ptLoyer = NULL);
+	gare(std::string nom, int prixAchat=200, Case* suivante=NULL, joueur* ptProprietaire=NULL,int* ptLoyer=NULL);
 	virtual ~gare();
-	void setNom(string Nom){this->nom =Nom;};
+	void setptCouleur(couleur* ptCouleur ){this->ptCouleur = ptCouleur;};
 	void arreterSur(joueur* ptJoueur);
 };
 

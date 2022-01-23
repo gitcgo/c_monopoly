@@ -16,7 +16,7 @@ private :
 public:
 	gobelet();
 	virtual ~gobelet();
-	int getValeur(){return (this->de1.getValeur() + this->de2.getValeur());};
+	int getValeur(){return (de1.getValeur() + de2.getValeur());};
 	void lancer();
 	bool Double();
 };

@@ -14,7 +14,7 @@ couleur::couleur(){
 
 }
 
-couleur::couleur(string nom,int longueur, propriete* liste_propriete) {
+couleur::couleur(std::string nom,int longueur, propriete* liste_propriete) {
 	// TODO Auto-generated constructor stub
 	this->nom = nom;
 	this->longueur = longueur ;

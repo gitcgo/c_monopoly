@@ -7,7 +7,7 @@
 
 #include "allezPrison.h"
 
-allezPrison::allezPrison(string nom, Case* suivante):Case(nom,suivante) {
+allezPrison::allezPrison(std::string nom, Case* suivante):Case(nom,suivante) {
 	// TODO Auto-generated constructor stub
 }
 

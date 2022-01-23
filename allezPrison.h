@@ -13,7 +13,7 @@
 
 class allezPrison: public Case {
 public:
-	allezPrison(string nom, Case* suivante=NULL);
+	allezPrison(std::string nom, Case* suivante=NULL);
 	virtual ~allezPrison();
 	void arretrSur(joueur* ptJoueur);
 };

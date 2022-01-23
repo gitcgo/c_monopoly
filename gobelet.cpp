@@ -22,5 +22,5 @@ void gobelet::lancer(){
 }
 
 bool gobelet::Double() {
-	return (this->de1.getValeur() == this->de2.getValeur());
+	return (this->de1.getValeur() == de2.getValeur());
 }

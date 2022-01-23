@@ -15,7 +15,7 @@ class prison: public Case {
 private :
 
 public:
-	prison(string nom, Case* suivante=NULL);
+	prison(std::string nom, Case* suivante=NULL);
 	virtual ~prison();
 	void arreterSur(joueur* ptJoueur) ;
 };

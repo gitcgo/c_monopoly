@@ -7,7 +7,7 @@
 
 #include "prison.h"
 
-prison::prison(string nom, Case* suivante):Case(nom,suivante){
+prison::prison(std::string nom, Case* suivante):Case(nom,suivante){
 
 }
 
@@ -18,8 +18,8 @@ prison::~prison() {
 
 void prison::arreterSur(joueur* ptJoueur) {
 	// Je pens eque ça sera géré avant dans le main
-	joueur Joueur = *ptJoueur ;
-	bool incarcere = Joueur.getPrison();
+
+	bool incarcere = (*ptJoueur).getPrison();
 
     ;
 }

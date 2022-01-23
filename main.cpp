@@ -24,9 +24,7 @@
 #include "Plateau.h"
 #include "Terrain.h"
 
-
-using namespace std;
-
+gobelet Gobelet = gobelet(); // définir une varaibel globale
 
 int main() {
 
@@ -38,26 +36,26 @@ int main() {
 
 	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
 
-
+	Plateau plateau = Plateau();
+	plateau.creerCases();
 
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
 
-		string nomJoueur;
-		cout << "Comment s'appelle le Joueur " << (string) i << "?" << endl;
-		cin << nomJoueur ;
-		string nomPion ;
-		cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " << (string) nmbrJoueur << endl ;
-		cin >> nomPion ;
+		std::string nomJoueur;
+		std::cout << "Comment s'appelle le Joueur " << i << "?" << std::endl;
+		std::cin >> nomJoueur ;
+		std::string nomPion ;
+		std::cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " <<  nmbrJoueur << std::endl ;
+		std::cin >> nomPion ;
 
-		pion* ptPion = new pion(nomPion);
+		pion* ptPion = new pion(nomPion,plateau.getListeCase());
 		pion Pion = *ptPion ;
 
-		joueur* ptJoueur = new joueur(nomJoueur,Pion);
-		joueur Joueur = *ptJoueur;
+		joueur* ptJoueur = new joueur(nomJoueur,ptPion);
 
-		listeJoueur[i] = Joueur;
-		Pion.setJoueur(&Joueur);
-		Pion.setPosition(truc);
+		listeJoueur[i] = *ptJoueur;
+		Pion.setJoueur(ptJoueur);
+		Pion.setPosition(plateau.getListeCase());
 	}
 
 	jeu Jeu = jeu();
@@ -67,8 +65,6 @@ int main() {
 
 	// On commence la partie
 
-	static gobelet Gobelet = gobelet();
-
 
 
 	while (Jeu.getCompteur() < 100 )  {
@@ -77,6 +73,12 @@ int main() {
 			Joueur.jouer();
 		}
 	}
+
+
+
+
+
+
 
 	return 0;
 }
