@@ -6,6 +6,8 @@
  */
 
 #include "depart.h"
+#include "Case.h"
+#include "joueur.h"
 
 depart::depart(std::string nom,Case* suivante):Case(nom,suivante) {
 	// TODO Auto-generated constructor stub

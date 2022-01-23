@@ -10,9 +10,10 @@
 
 #include "Case.h"
 #include <iostream>
-#include "joueur.h"
-#include "Carte.h"
-using namespace std;
+
+
+class joueur;
+class Carte;
 
 class communaute: public Case {
 	private :

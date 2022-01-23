@@ -6,6 +6,8 @@
  */
 
 #include "prison.h"
+#include "Case.h"
+#include "joueur.h"
 
 prison::prison(std::string nom, Case* suivante):Case(nom,suivante){
 

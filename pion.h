@@ -9,13 +9,12 @@
 #define PION_H_
 
 #include <iostream>
-#include "Case.h"
-#include "joueur.h"
 
 
 
 class joueur;
 class Case;
+class Plateau ;
 
 class pion {
 	private :

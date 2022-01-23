@@ -7,6 +7,8 @@
 
 #include "chance.h"
 #include <stdlib.h>
+#include "pion.h"
+#include "joueur.h"
 
 chance::chance(std::string nom, Case* suivante):Case(nom,suivante) {
 	this->pile_carte_chance = NULL;
@@ -24,11 +26,6 @@ void chance::arreterSur(joueur* ptJoueur){
 	std::cout << CarteTiree.getText() << std::endl;
 	Joueur.crediter(CarteTiree.getGain());
 	Joueur.debiter(CarteTiree.getPerte());
-	if ( CarteTiree.getDeplacement() > 0 ) {
-		pion* ptPion = Joueur.getptPion() ;
-		pion Pion = *ptPion;
-		Pion.deplacer(CarteTiree.getDeplacement()*(-1));
-	}
 
 	if ( CarteTiree.getText() == "Conservez cette carte pour pouvoir être libéré de prison") {
 		Joueur.setCartePrison(Joueur.getCartePrison());

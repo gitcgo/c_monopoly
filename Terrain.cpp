@@ -6,6 +6,7 @@
  */
 
 #include "Terrain.h"
+#include "joueur.h"
 
 Terrain::Terrain():propriete("temporaire",NULL,0,NULL,NULL){
 	this->Couleur = NULL;
@@ -23,8 +24,9 @@ void Terrain::arreterSur(joueur* ptJoueur){
 		std::cout<< "le bien est disponible. Son prix est de "<<this->prixAchat<<". Souhaitez-vous l'acheter ?"<< std::endl;
 		std::cin>> reponse;
 		if (reponse == "oui") {
-			ptJoueur->debiter(prixAchat);
-			std::cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << ptJoueur->getSolde() << std::endl ;
+			joueur Joueur = *ptJoueur;
+			Joueur.debiter(this->getPrixAchat());
+			std::cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << Joueur.getSolde() << std::endl ;
 			this->ptProprietaire = ptJoueur; //On signale à la propriete qu'il y a désormais un proprio
 		} //Il faut ajouter la propriÃ©tÃ© Ã  la liste des propriÃ©tÃ©s du joueur.
 		else{

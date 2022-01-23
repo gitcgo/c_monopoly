@@ -13,9 +13,9 @@ Case::Case(std::string nom, Case* suivante) {
 	this->suivante = suivante;
 }
 
-Case::Case(std::string nom) {
-    this->nom  = nom ;
-    this->suivante= NULL;
+Case::Case(){
+	this->nom = "undefinied";
+	this->suivante = NULL;
 }
 
 Case::~Case() {
@@ -23,6 +23,6 @@ Case::~Case() {
 }
 
 void Case::arreterSur(joueur *joueur) {
-	std::cout << "arreterSur non défini" << std::endl;
+
 }
 

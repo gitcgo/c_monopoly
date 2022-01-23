@@ -28,10 +28,10 @@ gobelet Gobelet = gobelet(); // définir une varaibel globale
 
 int main() {
 
-	cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corenton" << endl ;
+	std::cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corenton" << std::endl ;
 	int nmbrJoueur ;
-	cout << "Veuiller entrer le nombre de joueur : " << endl ;
-	cin >> nmbrJoueur ;
+	std::cout << "Veuiller entrer le nombre de joueur : " << std::endl ;
+	std::cin >> nmbrJoueur ;
 	joueur* listeJoueur = new joueur[nmbrJoueur];
 
 	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
@@ -65,12 +65,12 @@ int main() {
 
 	// On commence la partie
 
-
+	gobelet Gobelet = gobelet();
 
 	while (Jeu.getCompteur() < 100 )  {
 		for (int i = 0 ; i < nmbrJoueur ; i ++){
 			joueur Joueur = listeJoueur[i];
-			Joueur.jouer();
+			Joueur.jouer( plateau , Gobelet);
 		}
 	}
 

@@ -6,6 +6,7 @@
  */
 
 #include "pion.h"
+#include "Plateau.h"
 
 pion::pion(){
 	this->nom = "undefinied";

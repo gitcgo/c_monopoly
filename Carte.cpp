@@ -10,7 +10,6 @@
 Carte::Carte(std::string text,int gain, int perte,int deplacemenent,Case* ptTeleportation) {
 	this->gain = gain;
 	this->perte = perte ;
-	this-> deplacemenent = deplacemenent ;
 	this->ptTeleportation = ptTeleportation;
 	this->text = text;
 

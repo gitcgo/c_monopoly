@@ -6,6 +6,7 @@
  */
 
 #include "compagnie.h"
+#include "joueur.h"
 
 compagnie::compagnie():propriete("undefinied",NULL,0,NULL){
 
@@ -29,8 +30,9 @@ void compagnie::arreterSur(joueur* ptJoueur) {
 			std::cin>> reponse;
 
 			if (reponse == "oui") {
-				ptJoueur->debiter(this->prixAchat);
-				std::cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << ptJoueur->getSolde() << std::endl;
+				joueur Joueur = *ptJoueur;
+				Joueur.debiter(this->getPrixAchat());
+				std::cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << Joueur.getSolde() << std::endl;
 				ptProprietaire = ptJoueur; // maintenant elle appartient à qqn
 			} //Il faut ajouter la propriÃ©tÃ© Ã  la liste des propriÃ©tÃ©s du joueur.
 			else{

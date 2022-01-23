@@ -17,6 +17,7 @@
 #include "gobelet.h"
 
 class pion;
+class Plateau ;
 
 class joueur {
 	private :

@@ -6,6 +6,7 @@
  */
 
 #include "couleur.h"
+#include "joueur.h"
 
 couleur::couleur(){
 	this->nom = "No Name";

@@ -10,7 +10,10 @@
 
 #include "Case.h"
 
+class Case;
+
 class depart: public Case {
+
 private :
 	std::string nom ;
 public:

@@ -6,6 +6,7 @@
  */
 
 #include "allezPrison.h"
+#include "joueur.h"
 
 allezPrison::allezPrison(std::string nom, Case* suivante):Case(nom,suivante) {
 	// TODO Auto-generated constructor stub

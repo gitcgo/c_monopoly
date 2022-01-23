@@ -78,7 +78,7 @@ void joueur::jouer(Plateau plateau , gobelet Gobelet){
         				if (Gobelet.Double()){
         					this->prison = false;
         					this->temps_prison =0 ;
-        					this->ptPion->deplacer(Gobelet.getValeur());
+        					this->ptPion->deplacer(Gobelet.getValeur(),plateau);
         				}
         				else {
         					this->temps_prison += 1 ;
@@ -92,17 +92,17 @@ void joueur::jouer(Plateau plateau , gobelet Gobelet){
         	// A rajouter le choix de mettre des maisons ou pas
         	Gobelet.lancer();
         	int depalcement = Gobelet.getValeur();
-        	this->ptPion->deplacer(depalcement);
+        	this->ptPion->deplacer(depalcement,plateau);
         	if (Gobelet.Double() == true ){
         		if (this->solde > 0) {
         		Gobelet.lancer();
         		int depalcement = Gobelet.getValeur();
-        		this->ptPion->deplacer(depalcement);
+        		this->ptPion->deplacer(depalcement,plateau);
         		if (Gobelet.Double() == true){
         			if (this->solde > 0) {
         			    Gobelet.lancer();
         			    int depalcement = Gobelet.getValeur();
-        			    this->ptPion->deplacer(depalcement);
+        			    this->ptPion->deplacer(depalcement,plateau);
         			    if (Gobelet.Double()==true){// DIRECTION PRISON
         			    		this->prison= true ;
         			    		this->ptPion->setPosition(&plateau.getListeCase()[10]);
