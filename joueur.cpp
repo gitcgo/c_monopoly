@@ -7,6 +7,7 @@
 
 #include "joueur.h"
 #include "gobelet.h"
+#include <string>
 
 joueur::joueur(){
 	this->solde = 1500;
@@ -45,8 +46,18 @@ bool joueur::isOut(){
 
 void joueur::jouer(){
     if (solde > 0) {
+	gobelet::lancer()
         if (prison) {
-
+		if (gobelet::Double()){
+			this->prison = !this->prison;
+			this->temps_prison = 0;
+		}
+		else if{carte_liberation != 0){
+			string reponse;
+			cin >> reponse;
+		}
+			
+			
         }
         else {
 
