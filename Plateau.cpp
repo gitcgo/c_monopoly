@@ -368,6 +368,8 @@ void Plateau::creerCases() {
 		liste_couleur[7] = Bleu;
 		liste_couleur[8] = Gare;
 
+		this->liste_propriete = liste_couleur;
+
 
 
 		// Initialisation des 3 cases communaute
@@ -447,20 +449,20 @@ void Plateau::creerCases() {
 		ter10.setCouleur(&(liste_couleur[3]));
 		ter11.setCouleur(&(liste_couleur[3]));
 
-		ter12.setCouleur(&(liste_couleur[4]));
-		ter13.setCouleur(&(liste_couleur[4]));
-		ter14.setCouleur(&(liste_couleur[4]));
+	ter12.setCouleur(&(liste_couleur[4]));
+	ter13.setCouleur(&(liste_couleur[4]));
+	ter14.setCouleur(&(liste_couleur[4]));
 
-		ter15.setCouleur(&(liste_couleur[5]));
-		ter16.setCouleur(&(liste_couleur[5]));
-		ter17.setCouleur(&(liste_couleur[5]));
+	ter15.setCouleur(&(liste_couleur[5]));
+	ter16.setCouleur(&(liste_couleur[5]));
+	ter17.setCouleur(&(liste_couleur[5]));
 
-		ter18.setCouleur(&(liste_couleur[6]));
-		ter19.setCouleur(&(liste_couleur[6]));
-		ter20.setCouleur(&(liste_couleur[6]));
+	ter18.setCouleur(&(liste_couleur[6]));
+	ter19.setCouleur(&(liste_couleur[6]));
+	ter20.setCouleur(&(liste_couleur[6]));
 
-		ter21.setCouleur(&(liste_couleur[7]));
-		ter22.setCouleur(&(liste_couleur[7]));
+	ter21.setCouleur(&(liste_couleur[7]));
+	ter22.setCouleur(&(liste_couleur[7]));
 
 	
 	//liaison de toutes les cases (liste chainée)
@@ -509,12 +511,30 @@ void Plateau::creerCases() {
 	luxe.setSuivante(&ter22);
 	ter22.setSuivante(&Depart);
 
-	liste_case = &Depart;
+	this->liste_case = &Depart;
+	std::cout <<" Fin de la création du Plateau de Jeu ! " << std::endl;
 }
 
 //void Plateau::lierCases() {}. On vire cette méthode pour l'instant
 
 Case* Plateau::getCase(int IDCase ){
 	return &(this->liste_case[IDCase]);
+}
+
+void Plateau::afficheCases() {
+	Case* caseActuelle = this->liste_case ;
+	for (int i=0;i<40;i++){
+		std::cout << (*caseActuelle).getNom() << std::endl;
+		caseActuelle = (*caseActuelle).getSuivante();
+ 	}
+}
+
+void Plateau::affciheCouleurs(){
+	std::string couleurActuelle ;
+	for (int i=0;i<8;i++){
+			couleurActuelle = this->liste_propriete[i].getNom();
+			std::cout << couleurActuelle << std::endl;
+
+	 	}
 }
 

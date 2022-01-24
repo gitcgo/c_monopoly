@@ -28,6 +28,13 @@ gobelet Gobelet = gobelet(); // définir une varaibel globale
 
 int main() {
 
+	Plateau plateau = Plateau();
+	plateau.creerCases();
+
+	plateau.affciheCouleurs();
+
+	plateau.afficheCases();
+
 	std::cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corentin" << std::endl ;
 	int nmbrJoueur ;
 	std::cout << "Veuiller entrer le nombre de joueur : " << std::endl ;
@@ -36,8 +43,7 @@ int main() {
 
 	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
 
-	Plateau plateau = Plateau();
-	plateau.creerCases();
+
 
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
 

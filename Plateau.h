@@ -31,6 +31,8 @@ public:
 	//void lierCases();
 	Case* getCase(int IDCase );
 	Case* getListeCase(){return this->liste_case;};
+	void afficheCases();
+	void affciheCouleurs ();
 };
 
 #endif /* PLATEAU_H_ */
