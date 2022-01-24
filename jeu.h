@@ -10,7 +10,7 @@
 
 class jeu {
 protected:
-	static int tourdejeu ;
+	int tourdejeu ;
 public:
 	jeu();
 	virtual ~jeu();

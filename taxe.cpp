@@ -7,7 +7,7 @@
 
 #include "taxe.h"
 
-taxe::taxe(string nom, Case* suivante):Case(nom,suivante) {
+taxe::taxe(std::string nom, Case* suivante):Case(nom,suivante) {
 }
 
 taxe::~taxe() {
@@ -15,6 +15,5 @@ taxe::~taxe() {
 }
 
 void taxe::arreterSur(joueur* ptJoueur){
-	joueur Joueur = *ptJoueur ;
-	Joueur.debiter(200);
+	(*ptJoueur).debiter(200);
 }

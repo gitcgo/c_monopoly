@@ -13,11 +13,16 @@
 #include <iostream>
 #include "Case.h"
 #include "pion.h"
+#include "Plateau.h"
+#include "gobelet.h"
+
+class pion;
+class Plateau ;
 
 class joueur {
 	private :
-		string Nom; //Définir le nom du joueur, c'est pratique si c'est le même que le pion 
-		pion Pion ; //Pointeur vers le pion : le joueur doit savoir où se trouve son pion
+		std::string Nom; //Définir le nom du joueur, c'est pratique si c'est le même que le pion
+		pion* ptPion ; //Pointeur vers le pion : le joueur doit savoir où se trouve son pion
 		int solde ; //La THUNE possédée par le joueur
 		bool prison ; // Si le joueur est ecutellement en prison
 		int temps_prison ; // indique l enombre de tours depusi que le joueur est enferpe en prison
@@ -26,17 +31,17 @@ class joueur {
 	public:
         bool isOut();
 		joueur();
-		joueur(string nom,pion Pion ); //Constructeur du joueur
+		joueur(std::string nom,pion* ptPion ); //Constructeur du joueur
 		virtual ~joueur(); //Destructeur mais qu'on utilisera sûrement pas : le joueur reste là jusqu'à la fin du jeu
 	
-		string getNom(){return this->Nom;}; //Return le nom du joueur. Pas de setters associé, ce sera défini lors de la création de l'objet Joueur
+		std::string getNom(){return this->Nom;}; //Return le nom du joueur. Pas de setters associé, ce sera défini lors de la création de l'objet Joueur
 	
-		void setPion(pion Pion){this->Pion = Pion;}; //On set le pion du joueur avec tous ses attributs associés
-		pion getPion(){return this->Pion;}; //On get le pion du joueur, avec tous ses attributs associés
+		void setptPion(pion* ptPion){this->ptPion = ptPion;}; //On set le pion du joueur avec tous ses attributs associés
+		pion* getptPion(){return this->ptPion;}; //On get le pion du joueur, avec tous ses attributs associés
 
 		int getSolde(){return this->solde;}; //On get la THUNE du joueur.
 	
-		void jouer(); //Le joueur réalise un tour de jeu
+		void jouer(Plateau plateau , gobelet Gobelet); //Le joueur réalise un tour de jeu
 		void crediter(int credit); //On donne de l'argent au joueur
 		void debiter(int debit); //On débite de l'argent au joueur
 

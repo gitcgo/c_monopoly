@@ -10,12 +10,13 @@
 
 de::de() {
 	this->valeur = 0 ;
+	this->nbFaces =6;
 }
 
 de::~de() {
 	// TODO Auto-generated destructor stub
 }
 
-void de::lancer() {
+void de::lancer(){
 	this->valeur = rand() % (this->nbFaces - 1) + 1; // On lance un dé et on actualise la valeur du dé
 }

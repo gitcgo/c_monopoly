@@ -8,8 +8,8 @@
 #include "gobelet.h"
 
 gobelet::gobelet() {
-	de1 = de();
-	de2 = de();
+	this->de1 = de();
+	this->de2 = de();
 }
 
 gobelet::~gobelet() {
@@ -17,10 +17,10 @@ gobelet::~gobelet() {
 }
 
 void gobelet::lancer(){
-	de1.lancer();
-	de2.lancer();
+	this->de1.lancer();
+	this->de2.lancer();
 }
 
 bool gobelet::Double() {
-	return (de1.getValeur() == de2.getValeur());
+	return (this->de1.getValeur() == de2.getValeur());
 }

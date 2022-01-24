@@ -6,6 +6,7 @@
  */
 
 #include "couleur.h"
+#include "joueur.h"
 
 couleur::couleur(){
 	this->nom = "No Name";
@@ -14,7 +15,7 @@ couleur::couleur(){
 
 }
 
-couleur::couleur(string nom,int longueur, propriete* liste_propriete) {
+couleur::couleur(std::string nom,int longueur, propriete* liste_propriete) {
 	// TODO Auto-generated constructor stub
 	this->nom = nom;
 	this->longueur = longueur ;

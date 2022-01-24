@@ -6,12 +6,13 @@
  */
 
 #include "compagnie.h"
+#include "joueur.h"
 
 compagnie::compagnie():propriete("undefinied",NULL,0,NULL){
 
 }
 
-compagnie::compagnie(string nom,int* ptLoyer , int prixAchat, Case* suivante,joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante) {
+compagnie::compagnie(std::string nom,int* ptLoyer , int prixAchat, Case* suivante,joueur* ptProprietaire):propriete(nom, ptLoyer, prixAchat, suivante) {
 	// TODO Auto-generated constructor stub
 	this->ptProprietaire =NULL;
 }
@@ -21,20 +22,21 @@ compagnie::~compagnie() {
 }
 
 
-void compagnie::arreterSur(joueur* ptJoueur, gobelet Gobelet) {
-		joueur Joueur = *ptJoueur; // Ne pas confondre ptJoueur et Joueur
+void compagnie::arreterSur(joueur* ptJoueur) {
+		extern gobelet Gobelet ;
 		if (ptProprietaire == NULL){
-			string reponse;
-			cout<< "La case : "<< this->nom << "est disponible. Son prix est de "<<this->prixAchat<<" €. Souhaitez-vous l'acheter ?"<<endl;
-			cin>> reponse;
+			std::string reponse;
+			std::cout<< "La case : "<< this->nom << "est disponible. Son prix est de "<<this->prixAchat<<" €. Souhaitez-vous l'acheter ?"<< std::endl;
+			std::cin>> reponse;
 
 			if (reponse == "oui") {
-				Joueur.debiter(this->prixAchat);
-				cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << Joueur.getSolde();
+				joueur Joueur = *ptJoueur;
+				Joueur.debiter(this->getPrixAchat());
+				std::cout<<"Vous avez achete la propriete "<< this->nom << ". Votre solde est maintenant de " << Joueur.getSolde() << std::endl;
 				ptProprietaire = ptJoueur; // maintenant elle appartient à qqn
 			} //Il faut ajouter la propriÃ©tÃ© Ã  la liste des propriÃ©tÃ©s du joueur.
 			else{
-				cout<< "Vous avez décidé de ne pas acheter cette propriété"<<endl;
+				std::cout<< "Vous avez décidé de ne pas acheter cette propriété"<< std::endl;
 			}
 		}
 		else{
@@ -44,7 +46,7 @@ void compagnie::arreterSur(joueur* ptJoueur, gobelet Gobelet) {
 			}
 
 			int loyer = multiplicateur * Gobelet.getValeur() ; //On adapte le loyer en fonction du nombre de maison qu'il y a (ptLoyer[0]->0 maison et ptLoyer[5]->1 hotel)
-			cout << "Vous êtes tombé sur la case " << this->nom << ", vous devez payer "<< loyer << " € ."<< endl;
-			Joueur.crediter(loyer);
+			std::cout << "Vous êtes tombé sur la case " << this->nom << ", vous devez payer "<< loyer << " € ."<< std::endl;
+			ptJoueur->crediter(loyer);
 			ptJoueur->debiter(loyer);}
 }

@@ -24,16 +24,21 @@
 #include "Plateau.h"
 #include "Terrain.h"
 
-
-using namespace std;
-
+gobelet Gobelet = gobelet(); // définir une varaibel globale
 
 int main() {
 
-	cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corenton" << endl ;
+	Plateau plateau = Plateau();
+	plateau.creerCases();
+
+	plateau.affciheCouleurs();
+
+	plateau.afficheCases();
+
+	std::cout << "Bienvenue dans le logiciel Monopolyde ORY Victor , CHAPLAIN Nicolas, GOURC Corentin" << std::endl ;
 	int nmbrJoueur ;
-	cout << "Veuiller entrer le nombre de joueur : " << endl ;
-	cin >> nmbrJoueur ;
+	std::cout << "Veuiller entrer le nombre de joueur : " << std::endl ;
+	std::cin >> nmbrJoueur ;
 	joueur* listeJoueur = new joueur[nmbrJoueur];
 
 	// Création du plateau de manière à pouvoir placer le pion sur la carte départ
@@ -42,22 +47,30 @@ int main() {
 
 	for (int i = 0 ; i < nmbrJoueur ; i ++ ) {
 
-		string nomJoueur;
-		cout << "Comment s'appelle le Joueur " << (string) i << "?" << endl;
-		cin << nomJoueur ;
-		string nomPion ;
-		cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " << (string) nmbrJoueur << endl ;
-		cin >> nomPion ;
+		std::string nomJoueur;
+		std::cout << "Comment s'appelle le Joueur " << i + 1 << "?" << std::endl;
+		std::cin >> nomJoueur ;
+		std::string nomPion ;
+		std::cout << "Entrer le nom du pion que vous voulez sélectionner pour le jouer numéro " <<  i << std::endl ;
+		std::cin >> nomPion ;
 
-		pion* ptPion = new pion(nomPion);
+		pion* ptPion = new pion(nomPion,plateau.getListeCase());
 		pion Pion = *ptPion ;
 
-		joueur* ptJoueur = new joueur(nomJoueur,Pion);
+		joueur* ptJoueur = new joueur(nomJoueur,ptPion);
 		joueur Joueur = *ptJoueur;
-
 		listeJoueur[i] = Joueur;
-		Pion.setJoueur(&Joueur);
-		Pion.setPosition(truc);
+		Pion.setJoueur(ptJoueur);
+		Pion.setPosition(plateau.getListeCase());
+	}
+
+	std::cout<< "La phase de création des joueurs est finie ! " << std::endl;
+
+	for (int i = 0 ;  i < nmbrJoueur ; i ++ ) {
+		pion ptPionaffiche = *listeJoueur[i].getptPion();
+		std::string Pionaffiche = ptPionaffiche.getNom();
+		std::string casedépart = ptPionaffiche.getPosition()->getNom();
+		std::cout << "La position actuelle du pion"<< Pionaffiche << "du joueur "<< listeJoueur[i].getNom() <<" est la case : " << casedépart << std::endl;
 	}
 
 	jeu Jeu = jeu();
@@ -67,20 +80,13 @@ int main() {
 
 	// On commence la partie
 
-	static gobelet Gobelet = gobelet();
+	gobelet Gobelet = gobelet();
 
 	while (Jeu.getCompteur() < 100 )  {
 		for (int i = 0 ; i < nmbrJoueur ; i ++){
 			joueur Joueur = listeJoueur[i];
-			Joueur.jouer();
+			Joueur.jouer( plateau , Gobelet);
 		}
 	}
-
-
-
-
-
-
-
 	return 0;
 }

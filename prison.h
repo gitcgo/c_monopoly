@@ -9,13 +9,13 @@
 #define PRISON_H_
 
 #include "Case.h"
-#include "joueur.h"
+
+class Case;
 
 class prison: public Case {
-private :
 
 public:
-	prison(string nom, Case* suivante=NULL);
+	prison(std::string nom, Case* suivante=NULL);
 	virtual ~prison();
 	void arreterSur(joueur* ptJoueur) ;
 };

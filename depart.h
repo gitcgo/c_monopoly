@@ -10,11 +10,14 @@
 
 #include "Case.h"
 
+class Case;
+
 class depart: public Case {
+
 private :
-	string nom ;
+	std::string nom ;
 public:
-	depart(string nom,Case* suivante=NULL);
+	depart(std::string nom,Case* suivante=NULL);
 	virtual ~depart();
 	void arreterSur(joueur *ptjoueur) ;
 };

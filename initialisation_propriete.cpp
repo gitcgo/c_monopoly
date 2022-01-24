@@ -15,7 +15,8 @@
 #include "propriete.h"
 #include "couleur.h"
 #include "Terrain.h"
-#include "Gare.h"
+#include "compagnie.h"
+#include "gare.h"
 
 couleur* initialisation_propriete () {
 	couleur* liste_couleur = new couleur[9];
@@ -321,10 +322,9 @@ couleur* initialisation_propriete () {
 	liste_compagnie[0] = compagnie1;
 	liste_compagnie[1] = compagnie2;
 
-	couleur Gare = couleur("gare",4,liste_gare);
 
-	
 	// On peut maintenant initialiser les couleurs comme objets contenant la liste de terrains de leur couleur
+
 	couleur Brun = couleur("brun",2,liste_terrain_bru);
 	couleur Bleuciel = couleur("bleu ciel",2,liste_terrain_blc);
 	couleur Violet = couleur("violet",2,liste_terrain_vio);

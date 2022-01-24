@@ -6,19 +6,22 @@
  */
 #ifndef PROPRIETE_H_
 #define PROPRIETE_H_
+
 #include "Case.h"
+#include "couleur.h"
+
 class propriete: public Case {
 protected :
-	string nom ;
+	std::string nom ;
 	int* ptLoyer ;
 	int prixAchat ;
 	joueur* ptProprietaire;
 public:
-	propriete(string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietaire= NULL);
+	propriete(std::string nom, int* ptLoyer, int prixAchat, Case* suivante, joueur* ptProprietaire= NULL);
 	virtual ~propriete();
 	void arreterSur() ;
-	string getNom(){return this->nom;};
-	void setNom(string Nom){this->nom=Nom;};
+	std::string getNom(){return this->nom;};
+	void setNom(std::string Nom){this->nom=Nom;};
 	int* getPtLoyer(){return this->ptLoyer;};
 	void setLoyer(int* ptLoyer){this->ptLoyer = ptLoyer;};
 	void setPrixAchat(int prix){this->prixAchat = prix;};
